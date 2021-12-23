@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup_m</title>
+    <link rel="stylesheet" href="popup_m.css">
+</head>
+<body>
+    <!-- [D] 팝업창 -->
+    <div class="popup_layer">
+        <!-- 로그인 안내 팝업 -->
+        <div class="popup_box popup_login" style="display: none">
+            <div class="popup_contents">
+                <div class="inner_wrap">
+                    <div class="popup_alert">
+                        <p class="txt_box">비로그인 상태입니다.<br> 비로그인 상태에서는<br> 참여 리워드가 지급되지 않습니다.
+                        </p>
+                    </div>
+                    <a href="#" class="btn_confirm">로그인 하기</a>
+                </div>
+                <button type="button" class="btn_close"><span class="blind">창닫기</span></button>
+            </div>
+            <div class="dimmed"></div>
+        </div>
+        <!-- // 로그인 안내 팝업 -->
+
+        <!-- 콩 지급 팝업  -->
+        <div class="popup_box popup_beans" style="display: none;">
+            <div class="popup_contents">
+                <div class="inner_wrap">
+                    <div class="popup_alert">
+                        <p>
+                            <span class="t-bold t-color-yellow">캠페인</span>에 참여해주셔서 감사합니다. <br>
+                            <strong class="t-bold">콩 <span>1</span>개</strong>를 받으셨습니다.
+                        </p>
+                    </div>
+                    <div class="popup_personal">
+                        <span class="user">00</span>님의 보유 콩 개수 <strong><span class="user_count">00</span>개</strong>
+                    </div>
+                    <div class="btn_myhappybean">
+                        <a href="http://happybean.naver.com/my/MyCongUsingDetailMain" target="_blank">My해피빈 바로가기 <em>></em></a>
+                    </div>
+                    <button type="button" class="btn_confirm">확인</button>
+                </div>
+                <button type="button" class="btn_close"><span class="blind">창닫기</span></button>
+            </div>
+            <div class="dimmed"></div>
+        </div>
+        <!-- // 콩 지급 팝업-->
+
+        <!-- 캠페인 종료 시 팝업 -->
+        <div class="popup_box popup_close"  style="display: none;">
+            <div class="popup_contents">
+                <div class="inner_wrap">
+                    <div class="popup_alert">
+                        <p>캠페인이 종료되어 <br>콩이 지급되지 않습니다.<br> 참여해 주셔서 감사합니다!</p>
+                    </div>
+                    <button type="button" class="btn_confirm">확인</button>
+                </div>
+                <button type="button" class="btn_close"><span class="blind">창닫기</span></button>
+            </div>
+            <div class="dimmed"></div>
+        </div>
+        <!-- // 캠페인 종료 시 팝업 -->
+
+        <!-- 이미 참여 안내 팝업 -->
+        <div class="popup_box popup_already" style="display: none;">
+            <div class="popup_contents">
+                <div class="inner_wrap">
+                    <div class="popup_alert">
+                        <p>캠페인에 이미 참여하여 <br>콩이 지급되지 않습니다. <br>감사합니다!
+                        </p>
+                    </div>
+                    <button type="button" class="btn_confirm">확인</button>
+                </div>
+                <button type="button" class="btn_close"><span class="blind">창닫기</span></button>
+            </div>
+            <div class="dimmed"></div>
+        </div>
+        <!-- // 이미 참여 안내 팝업 -->
+    </div>
+    <!-- // [D] 팝업창 -->
+</body>
+</html>

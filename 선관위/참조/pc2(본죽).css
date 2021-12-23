@@ -1,0 +1,1441 @@
+<style type="text/css">
+            .blind {
+                overflow: hidden;
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                clip: rect(0 0 0 0);
+            }
+    
+            a,
+            a:hover,
+            a:focus {
+                text-decoration: none;
+            }
+    
+            /* mixin */
+            /* //mixin */
+            .campaign_wrap {
+                font-family: NanumSquareWebFont, dotum, Sans-serif;
+                line-height: 1;
+            }
+    
+            .bonif_wrap {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+    
+            .bonif_wrap .inner {
+                width: 1000px;
+                margin: 0 auto;
+            }
+    
+            .bonif_wrap .btn_receive {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                width: 444px;
+                height: 84px;
+                background-position: 2px -109px;
+                cursor: default;
+            }
+    
+            .bonif_wrap .btn_receive.on {
+                background-position: 2px -16px;
+                cursor: pointer;
+            }
+    
+            .bonif_wrap .btn_receive_area {
+                margin-top: 26px;
+                text-align: center;
+            }
+    
+            .floating_nav {
+                position: fixed;
+                top: 160px;
+                right: 50%;
+                margin-right: -820px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_nav.png) 50% 0 no-repeat;
+                background-size: 216px 189px;
+                font-size: 0;
+                z-index: 20;
+                text-align: center;
+            }
+    
+            .floating_nav .inner {
+                width: 216px;
+                height: 189px;
+                margin: 0 auto;
+            }
+    
+            .count_area {
+                display: inline-block;
+                padding-top: 110px;
+                margin-left: -30px;
+            }
+    
+            .count_area .counter {
+                font-size: 28px;
+                font-weight: 800;
+                color: #5e2a2b;
+            }
+    
+            /* spot */
+            .together_spot {
+                height: 960px;
+                background: #fff url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_spot.jpg) no-repeat 50% 0;
+                background-size: 1920px 960px;
+            }
+    
+            .together_spot .inner {
+                position: relative;
+                height: 100%;
+            }
+    
+            .together_logo_link {
+                position: absolute;
+                top: 55px;
+                width: 83px;
+                height: 60px;
+            }
+    
+            /* ‘효’ 배달캠페인 */
+            .section_campagin {
+                position: relative;
+                background-color: #fff;
+            }
+    
+            .section_campagin .inner {
+                padding: 100px 0;
+            }
+    
+            .section_campagin .section_title {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/section_title_01.png) no-repeat 50% 0;
+                background-size: 670px 234px;
+                width: 670px;
+                height: 234px;
+                margin: 0 auto;
+            }
+    
+            .section_campagin .card_area {
+                height: 670px;
+                margin-top: 16px;
+                font-size: 0;
+                text-align: center;
+            }
+    
+            .section_campagin .card_title {
+                font-size: 48px;
+                letter-spacing: -1.2px;
+            }
+    
+            .section_campagin .card_text {
+                margin-top: 15px;
+                font-size: 24px;
+                letter-spacing: -0.6px;
+                line-height: 29px;
+                word-break: keep-all;
+            }
+    
+            .section_campagin [class^="card_front"],
+            .section_campagin [class^="card_back"] {
+                width: 235px;
+                height: 570px;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+            }
+    
+            .section_campagin [class^="card_back"] {
+                -webkit-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+                position: relative;
+                top: -570px;
+                padding: 100px 18px 0;
+                color: #fff;
+                text-align: center;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+    
+            .section_campagin .card_list {
+                display: inline-block;
+                margin: 0 10px;
+                vertical-align: middle;
+            }
+    
+            .section_campagin .card_list.on [class^="card_front"] {
+                -webkit-transform: rotateY(-180deg);
+                -ms-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+                width: 235px;
+                height: 570px;
+            }
+    
+            .section_campagin .card_list.on [class^="card_back"] {
+                -webkit-transform: rotateY(0);
+                -ms-transform: rotateY(0);
+                transform: rotateY(0);
+                width: 235px;
+                height: 570px;
+            }
+    
+            .section_campagin .card_list:first-child {
+                margin-left: 0;
+            }
+    
+            .section_campagin .card_list:last-child {
+                margin-right: 0;
+            }
+    
+            .section_campagin .card_list:nth-of-type(even) {
+                margin-top: 80px;
+            }
+    
+            .section_campagin .card_front_01 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_front_card1.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_back_01 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_back_card1.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_front_02 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_front_card2.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_back_02 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_back_card2.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_front_03 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_front_card3.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_back_03 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_back_card3.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_front_04 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_front_card4.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_back_04 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_back_card4.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .btn_motion {
+                display: inline-block;
+                width: 175px;
+                height: 50px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_confirm.png) no-repeat;
+                background-size: 175px 50px;
+                margin-top: -70px;
+            }
+    
+            .section_campagin .count_area {
+                padding-top: 375px;
+            }
+    
+            .section_campagin .count_area .counter {
+                font-size: 44px;
+                color: #fff;
+            }
+    
+            /* 효배달 함께하기 */
+            .section_delivery {
+                height: 1500px;
+                background: #fff1da url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_desk.jpg) repeat-x 50% bottom;
+                background-size: 1920px 410px;
+            }
+    
+            .section_delivery .inner {
+                position: relative;
+                padding-top: 100px;
+            }
+    
+            .section_delivery .section_title {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/section_title_02.png) no-repeat 50% 0;
+                background-size: 846px 344px;
+                width: 846px;
+                height: 344px;
+                margin: 0 auto 60px;
+            }
+    
+            .section_delivery .list_area {
+                position: relative;
+                height: 100%;
+            }
+    
+            .section_delivery .delivery_area {
+                position: relative;
+                width: 1046px;
+                height: 970px;
+                margin: 0 auto;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_delivery1.jpg) 10px 221px no-repeat;
+                background-size: 1046px 758px;
+                margin-left: -30px;
+            }
+    
+            .section_delivery .delivery_area.stop::after {
+                content: none;
+            }
+    
+            .section_delivery .delivery_area:after {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                -webkit-animation: move_item_01 1.5s infinite;
+                animation: move_item_01 1.5s infinite;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 70px;
+                height: 90px;
+                background-position: 0 -464px;
+                z-index: 2;
+            }
+    
+            .section_delivery .delivery_area.item_01:after {
+                -webkit-animation: move_item_02 1.5s infinite;
+                animation: move_item_02 1.5s infinite;
+            }
+    
+            .section_delivery .delivery_area.item_01 .present_item_01 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_01.png) no-repeat;
+                background-size: 205px 149px;
+            }
+    
+            .section_delivery .delivery_area.item_01 .present_item_01:hover {
+                top: 34px;
+                left: 110px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_01.png) no-repeat;
+                background-size: 205px 149px;
+            }
+    
+            .section_delivery .delivery_area.item_02:after {
+                -webkit-animation: move_item_03 1.5s infinite;
+                animation: move_item_03 1.5s infinite;
+            }
+    
+            .section_delivery .delivery_area.item_02 .present_item_02 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_02.png) no-repeat;
+                background-size: 184px 148px;
+            }
+    
+            .section_delivery .delivery_area.item_02 .present_item_02:hover {
+                top: 34px;
+                left: 337px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_02.png) no-repeat;
+                background-size: 184px 148px;
+            }
+    
+            .section_delivery .delivery_area.item_03:after {
+                -webkit-animation: move_item_04 1.5s infinite;
+                animation: move_item_04 1.5s infinite;
+            }
+    
+            .section_delivery .delivery_area.item_03 .present_item_03 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_03.png) no-repeat;
+                background-size: 182px 143px;
+            }
+    
+            .section_delivery .delivery_area.item_03 .present_item_03:hover {
+                top: 34px;
+                left: 534px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_03.png) no-repeat;
+                background-size: 182px 143px;
+            }
+    
+            .section_delivery .delivery_area.item_04:after {
+                display: none;
+            }
+    
+            .section_delivery .delivery_area.item_04 .present_item_04 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_04.png) no-repeat;
+                background-size: 192px 140px;
+            }
+    
+            .section_delivery .delivery_area.item_04 .present_item_04:hover {
+                top: 34px;
+                left: 739px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_04.png) no-repeat;
+                background-size: 192px 140px;
+            }
+    
+            .section_delivery .btn_receive_area {
+                position: absolute;
+                bottom: 71px;
+                left: 0;
+                right: 0;
+            }
+    
+            .section_delivery [class^="present_"] {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1000px;
+                height: 220px;
+                z-index: 1;
+            }
+    
+            .section_delivery .present_bubble {
+                position: absolute;
+                width: 940px;
+                height: 220px;
+                z-index: 1;
+                background-color: #fff;
+                border-radius: 200px;
+                margin-left: 50px;
+            }
+    
+            .section_delivery .present_item_01 {
+                top: 34px;
+                left: 110px;
+                margin-left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_01.png) no-repeat;
+                background-size: 205px 149px;
+                width: 230px;
+                height: 155px;
+            }
+    
+            .section_delivery .present_item_01:hover {
+                top: 20px;
+                left: 73px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_hover_01.png) no-repeat 10px 6px;
+                background-size: 239px 338px;
+                width: 310px;
+                height: 440px;
+            }
+    
+            .section_delivery .present_item_01:active {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_01.png) no-repeat;
+                background-size: 205px 149px;
+                width: 230px;
+                height: 155px;
+            }
+    
+            .section_delivery .present_item_01:focus {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_01.png) no-repeat;
+                background-size: 205px 149px;
+                width: 230px;
+                height: 155px;
+            }
+    
+            .section_delivery .present_item_02 {
+                top: 34px;
+                left: 337px;
+                margin-left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_02.png) no-repeat;
+                background-size: 184px 148px;
+                width: 190px;
+                height: 148px;
+            }
+    
+            .section_delivery .present_item_02:hover {
+                top: 26px;
+                left: 318px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_hover_02.png) no-repeat 10px 0;
+                background-size: 201px 249px;
+                width: 230px;
+                height: 305px;
+            }
+    
+            .section_delivery .present_item_02:active {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_02.png) no-repeat;
+                background-size: 184px 148px;
+                width: 184px;
+                height: 148px;
+            }
+    
+            .section_delivery .present_item_02:focus {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_02.png) no-repeat;
+                background-size: 184px 148px;
+                width: 184px;
+                height: 148px;
+            }
+    
+            .section_delivery .present_item_03 {
+                top: 34px;
+                left: 534px;
+                margin-left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_03.png) no-repeat;
+                background-size: 182px 143px;
+                width: 182px;
+                height: 143px;
+            }
+    
+            .section_delivery .present_item_03:hover {
+                top: 25px;
+                left: 518px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_hover_03.png) no-repeat 10px 0;
+                background-size: 197px 277px;
+                width: 210px;
+                height: 277px;
+            }
+    
+            .section_delivery .present_item_03:active {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_03.png) no-repeat;
+                background-size: 182px 143px;
+                width: 182px;
+                height: 143px;
+            }
+    
+            .section_delivery .present_item_03:focus {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_03.png) no-repeat;
+                background-size: 182px 143px;
+                width: 182px;
+                height: 143px;
+            }
+    
+            .section_delivery .present_item_04 {
+                top: 34px;
+                left: 739px;
+                margin-left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_04.png) no-repeat;
+                background-size: 192px 140px;
+                width: 192px;
+                height: 140px;
+            }
+    
+            .section_delivery .present_item_04:hover {
+                top: 27px;
+                left: 722px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_hover_04.png) no-repeat 10px 0;
+                background-size: 209px 240px;
+                width: 230px;
+                height: 277px;
+            }
+    
+            .section_delivery .present_item_04:active {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_04.png) no-repeat;
+                background-size: 192px 140px;
+                width: 192px;
+                height: 140px;
+            }
+    
+            .section_delivery .present_item_04:focus {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_04.png) no-repeat;
+                background-size: 192px 140px;
+                width: 192px;
+                height: 140px;
+            }
+    
+            .section_delivery .delivery_item_01 {
+                position: absolute;
+                left: -2px;
+                bottom: 288px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_01.png) 50% 0 no-repeat;
+                background-size: 213px 160px;
+                width: 213px;
+                height: 160px;
+            }
+    
+            .section_delivery .delivery_item_01.on {
+                left: -17px;
+                bottom: 241px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_on_01_v2.png) 50% 0 no-repeat;
+                background-size: 240px 183px;
+                width: 240px;
+                height: 200px;
+            }
+    
+            .section_delivery .delivery_item_01.on:after {
+                content: '';
+                position: absolute;
+                left: 115px;
+                bottom: 92px;
+                width: 182px;
+                height: 252px;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_motion_02.png) no-repeat 50% 0;
+                background-size: 182px 252px;
+            }
+    
+            .section_delivery .delivery_item_02 {
+                position: absolute;
+                left: 261px;
+                bottom: 288px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_02.png) 50% 0 no-repeat;
+                background-size: 194px 159px;
+                width: 194px;
+                height: 159px;
+            }
+    
+            .section_delivery .delivery_item_02.on {
+                left: 269px;
+                bottom: 296px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_on_02_v2.png) 50% 0 no-repeat;
+                background-size: 180px 144px;
+                width: 180px;
+                height: 144px;
+            }
+    
+            .section_delivery .delivery_item_02.on:after {
+                content: '';
+                position: absolute;
+                left: 85px;
+                bottom: 55px;
+                width: 182px;
+                height: 252px;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_motion_02.png) no-repeat 50% 0;
+                background-size: 182px 252px;
+            }
+    
+            .section_delivery .delivery_item_03 {
+                position: absolute;
+                left: 543px;
+                bottom: 288px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_03.png) 50% 0 no-repeat;
+                background-size: 201px 163px;
+                width: 201px;
+                height: 163px;
+            }
+    
+            .section_delivery .delivery_item_03.on {
+                left: 530px;
+                bottom: 264px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_on_03_v2.png) 50% 0 no-repeat;
+                background-size: 226px 178px;
+                width: 226px;
+                height: 178px;
+            }
+    
+            .section_delivery .delivery_item_03.on:after {
+                content: '';
+                position: absolute;
+                left: 80px;
+                bottom: 65px;
+                width: 182px;
+                height: 252px;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_motion_02.png) no-repeat 50% 0;
+                background-size: 182px 252px;
+            }
+    
+            .section_delivery .delivery_item_04 {
+                position: absolute;
+                left: 801px;
+                bottom: 288px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_04.png) 50% 0 no-repeat;
+                background-size: 230px 174px;
+                width: 230px;
+                height: 174px;
+            }
+    
+            .section_delivery .delivery_item_04.on {
+                left: 810px;
+                bottom: 296px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_on_04_v2.png) 50% 0 no-repeat;
+                background-size: 213px 156px;
+                width: 213px;
+                height: 156px;
+            }
+    
+            .section_delivery .delivery_item_04.on:after {
+                content: '';
+                position: absolute;
+                left: 94px;
+                bottom: 65px;
+                width: 182px;
+                height: 252px;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_motion_02.png) no-repeat 50% 0;
+                background-size: 182px 252px;
+            }
+    
+            /* 홀로 어르신 현황 */
+            .section_together_status {
+                background-color: #fbf7f3;
+            }
+    
+            .section_together_status .inner {
+                padding-top: 55px;
+                padding-bottom: 60px;
+            }
+    
+            .section_together_status .section_text {
+                font-size: 34px;
+                line-height: 45px;
+                letter-spacing: -0.5px;
+                text-align: center;
+                padding-bottom: 22px;
+            }
+    
+            .section_together_status .donation {
+                text-align: center;
+                font-size: 21px;
+                line-height: 50px;
+                letter-spacing: -0.3px;
+                color: #252525;
+            }
+    
+            .section_together_status .donation_number {
+                display: inline-block;
+                vertical-align: top;
+                font-size: 54px;
+                line-height: 50px;
+                letter-spacing: -0.5px;
+                color: #37af4b;
+                font-weight: 800;
+                margin-right: 5px;
+            }
+    
+            .section_together_status .unit {
+                font-size: 27px;
+                line-height: 50px;
+                letter-spacing: -0.5px;
+                color: #37af4b;
+                font-weight: 800;
+            }
+    
+            .section_together_status .section_box {
+                overflow: hidden;
+                height: 227px;
+                margin-top: 35px;
+            }
+    
+            .section_together_status .box_item {
+                position: relative;
+                float: left;
+                height: 100%;
+                color: #252525;
+            }
+    
+            .section_together_status .box_item+.box_item {
+                margin-left: 40px;
+            }
+    
+            .section_together_status .box_item+.box_item .thumb {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/thumb_02.png);
+                background-size: 270px 227px;
+            }
+    
+            .section_together_status .box_item+.box_item dl dt {
+                color: #37af4b;
+            }
+    
+            .section_together_status .box_item .thumb {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/thumb_01.png);
+                background-size: 270px 227px;
+                width: 270px;
+                height: 227px;
+            }
+    
+            .section_together_status .box_item dl {
+                margin-left: 290px;
+                letter-spacing: -0.5px;
+            }
+    
+            .section_together_status .box_item dl dt {
+                font-size: 20px;
+                color: #f28b00;
+                padding-top: 17px;
+                padding-bottom: 10px;
+            }
+    
+            .section_together_status .box_item dl dd {
+                font-size: 24px;
+            }
+    
+            .section_together_status .box_item p {
+                font-size: 20px;
+                line-height: 27px;
+                letter-spacing: -0.3px;
+                padding-top: 17px;
+                margin-left: 290px;
+            }
+    
+            .section_together_status .box_item a {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 25px;
+                margin-left: 290px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_detail.png);
+                background-size: 120px 25px;
+                width: 120px;
+                height: 25px;
+            }
+    
+            /* 공유하기 배너 */
+            .section_share {
+                background-color: #f0e8e1;
+            }
+    
+            .section_share .inner {
+                padding: 17px 0;
+            }
+    
+            .section_share .api_band a {
+                display: block;
+                width: 70px;
+                height: 70px;
+            }
+    
+            .section_share .api_band img {
+                display: none;
+            }
+    
+            .section_share .inner:after {
+                display: block;
+                clear: both;
+                content: '';
+            }
+    
+            .section_share .sns_list {
+                float: left;
+                margin-right: 60px;
+            }
+    
+            .section_share .sns_item {
+                float: left;
+                margin: 20px 0;
+            }
+    
+            .section_share .sns_item+.sns_item {
+                margin-left: 29px;
+            }
+    
+            .section_share .sns_item:first-child {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                background-position: -70px -485px;
+            }
+    
+            .section_share .sns_item:first-child a:after{
+                content: none;
+            }
+    
+            .section_share .link_box {
+                display: block;
+                width: 70px;
+                height: 70px;
+            }
+    
+            .section_share .link_box:after {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                content: '';
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                vertical-align: middle;
+            }
+    
+            .section_share .sns_icon_facebook:after {
+                background-position: -341px -485px;
+            }
+    
+            .section_share .sns_icon_twitter:after {
+                background-position: -251px -485px;
+            }
+    
+            .section_share .sns_icon_kakaostory:after {
+                background-position: -161px -485px;
+            }
+    
+            .section_share .sns_text {
+                padding-top: 42px;
+                font-size: 27px;
+                color: #252525;
+                font-weight: 800;
+            }
+    
+            /* 댓글 응원하기 */
+            .section_comment .inner {
+                position: relative;
+                height: 100%;
+                padding: 93px 300px 17px 0;
+                text-align: left;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+    
+            .section_comment .img_bean {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+    
+            .section_comment .sec_title {
+                font-size: 34px;
+                line-height: 47px;
+                letter-spacing: -0.5px;
+            }
+    
+            .section_comment .accent {
+                color: #f28b00;
+            }
+    
+            .section_comment .comment_text {
+                margin: 14px 0 12px;
+                font-size: 22px;
+                line-height: 47px;
+                letter-spacing: -0.5px;
+                color: #777;
+            }
+    
+            .section_comment .comment_text span {
+                color: #21c531;
+            }
+    
+            .comment_info {
+                font-size: 0;
+                letter-spacing: -0.5px;
+                color: #777;
+            }
+    
+            .comment_info+.comment_info {
+                margin-top: 1px;
+            }
+    
+            .comment_info dt {
+                display: inline-block;
+                line-height: 32px;
+                font-size: 22px;
+                vertical-align: middle;
+            }
+    
+            .comment_info dd {
+                display: inline-block;
+                margin: 0 0 0 4px;
+                line-height: 32px;
+                font-size: 22px;
+                vertical-align: middle;
+            }
+    
+            .caution_text {
+                font-size: 19px;
+                line-height: 46px;
+                letter-spacing: -0.5px;
+                color: #afafaf;
+            }
+    
+            @-webkit-keyframes blink {
+                0% {
+                    opacity: 0;
+                }
+    
+                100% {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes blink {
+                0% {
+                    opacity: 0;
+                }
+    
+                100% {
+                    opacity: 1;
+                }
+            }
+    
+            @-webkit-keyframes move_item_01 {
+                0% {
+                    -webkit-transform: translate(185px, 100px);
+                    transform: translate(185px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(100px, 600px);
+                    transform: translate(100px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @keyframes move_item_01 {
+                0% {
+                    -webkit-transform: translate(185px, 100px);
+                    transform: translate(185px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(100px, 600px);
+                    transform: translate(100px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @-webkit-keyframes move_item_02 {
+                0% {
+                    -webkit-transform: translate(400px, 100px);
+                    transform: translate(400px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(320px, 600px);
+                    transform: translate(320px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @keyframes move_item_02 {
+                0% {
+                    -webkit-transform: translate(400px, 100px);
+                    transform: translate(400px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(320px, 600px);
+                    transform: translate(320px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @-webkit-keyframes move_item_03 {
+                0% {
+                    -webkit-transform: translate(600px, 100px);
+                    transform: translate(600px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(600px, 600px);
+                    transform: translate(600px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @keyframes move_item_03 {
+                0% {
+                    -webkit-transform: translate(600px, 100px);
+                    transform: translate(600px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(600px, 600px);
+                    transform: translate(600px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @-webkit-keyframes move_item_04 {
+                0% {
+                    -webkit-transform: translate(800px, 100px);
+                    transform: translate(800px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(900px, 600px);
+                    transform: translate(900px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @keyframes move_item_04 {
+                0% {
+                    -webkit-transform: translate(800px, 100px);
+                    transform: translate(800px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(900px, 600px);
+                    transform: translate(900px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            /* 팝업 */
+            #popup_all .bonif_popup {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 150;
+            }
+    
+            #popup_all .popup_bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+    
+            #popup_all .popup_wrap {
+                display: table;
+                width: 100%;
+                height: 100%;
+            }
+    
+            #popup_all .popup {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+    
+            #popup_all .popup_inner {
+                display: inline-block;
+                position: relative;
+                width: 600px;
+                background-color: #fff;
+                border-radius: 40px;
+            }
+    
+            #popup_all .popup_inner:before {
+                content: '';
+                position: absolute;
+                top: -188px;
+                left: 111px;
+                width: 385px;
+                height: 251px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/icon_pop_title.png) no-repeat 50% 0;
+                background-size: 385px 251px;
+            }
+    
+            #popup_all .popup_logo {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                margin: 0 auto 19px;
+                width: 217px;
+                height: 59px;
+                background-position: -292px -495px;
+            }
+    
+            #popup_all .popup_content {
+                padding-top: 114px;
+            }
+    
+            #popup_all .popup_content .title {
+                font-size: 42px;
+                font-weight: 800;
+                line-height: 67px;
+                color: #3e3e3e;
+                letter-spacing: -0.4px;
+            }
+    
+            #popup_all .popup_content .title span {
+                color: #f28b00;
+            }
+    
+            #popup_all .popup_content .title span.green_text {
+                color: #37af4b;
+            }
+    
+            #popup_all .popup_content .title .small_text {
+                font-size: 29px;
+                color: #3e3e3e;
+            }
+    
+            #popup_all .popup_content .comment,
+            #popup_all .popup_content .information {
+                font-size: 29px;
+                line-height: 42px;
+                letter-spacing: -0.4px;
+                color: #3e3e3e;
+            }
+    
+            #popup_all .popup_content .comment {
+                margin-top: 12px;
+                margin-bottom: 52px;
+            }
+    
+            #popup_all .popup_content .information {
+                margin-top: 26px;
+                color: #3e3e3e;
+            }
+    
+            #popup_all .popup_content .information .amount {
+                margin-left: 6px;
+                margin-right: 6px;
+                font-size: 50px;
+                color: #37af4b;
+            }
+    
+            #popup_all .popup_content .link_my {
+                display: inline-block;
+                font-size: 22px;
+                line-height: 67px;
+                color: #37af4b;
+                margin-top: 8px;
+                margin-bottom: 20px;
+            }
+    
+            #popup_all .popup_content .button_confirm {
+                display: block;
+                padding: 17px 50px;
+                border-radius: 50px;
+                width: 230px;
+                background-color: #5e2a2b;
+                margin: 0 auto 60px;
+                font-size: 26px;
+                color: #fff;
+                font-weight: bold;
+            }
+    
+            #popup_all .popup_content .button_close {
+                position: absolute;
+                top: 30px;
+                right: 27px;
+                padding: 22px 24px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                background-position: -518px -512px;
+            }
+    
+            #popup_all #popup_login .title {
+                line-height: 54px;
+            }
+    
+            #popup_all #popup_login .popup_content .comment {
+                margin-top: 18px;
+            }
+    
+            #popup_all #popup_success .popup_content {
+                padding-top: 94px;
+            }
+    
+            #popup_all #popup_success .title {
+                font-size: 42px;
+                line-height: 56px;
+            }
+    
+            #popup_all #popup_success .comment {
+                margin-top: 20px;
+                font-size: 29px;
+            }
+    
+            #popup_all #popup_end .popup_content {
+                padding-top: 102px;
+            }
+    
+            #popup_all #popup_end .popup_content .title {
+                line-height: 56px;
+            }
+    
+            #popup_all #popup_end .popup_content .comment {
+                margin-top: 22px;
+            }
+    
+            #popup_all #popup_already .popup_content {
+                padding-top: 102px;
+            }
+    
+            #popup_all #popup_already .popup_content .title {
+                line-height: 56px;
+            }
+    
+            #popup_all #popup_already .popup_content .comment {
+                margin-top: 22px;
+            }
+    
+            #popup_all .delivery_popup_01 .popup_inner {
+                position: relative;
+                width: 1000px;
+                height: 500px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_pop_01.jpg) no-repeat;
+                background-size: 1000px 500px;
+            }
+    
+            #popup_all .delivery_popup_01 .popup_inner:before {
+                left: 308px;
+            }
+    
+            #popup_all .delivery_popup_01 .popup_content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+    
+            #popup_all .delivery_popup_01 .button_confirm {
+                margin: 390px auto 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_pop_confirm.png) no-repeat;
+                background-size: 430px 60px;
+                width: 430px;
+                height: 60px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 50px;
+            }
+    
+            #popup_all .delivery_popup_01 .btn_pop_close {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 42px;
+                height: 42px;
+                background-position: -522px -512px;
+            }
+    
+            #popup_all .delivery_popup_02 .popup_inner {
+                position: relative;
+                width: 1000px;
+                height: 500px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_pop_02.jpg) no-repeat;
+                background-size: 1000px 500px;
+            }
+    
+            #popup_all .delivery_popup_02 .popup_inner:before {
+                left: 308px;
+            }
+    
+            #popup_all .delivery_popup_02 .popup_content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+    
+            #popup_all .delivery_popup_02 .button_confirm {
+                margin: 390px auto 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_pop_confirm.png) no-repeat;
+                background-size: 430px 60px;
+                width: 430px;
+                height: 60px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 50px;
+            }
+    
+            #popup_all .delivery_popup_02 .btn_pop_close {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 42px;
+                height: 42px;
+                background-position: -522px -512px;
+            }
+    
+            #popup_all .delivery_popup_03 .popup_inner {
+                position: relative;
+                width: 1000px;
+                height: 500px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_pop_03.jpg) no-repeat;
+                background-size: 1000px 500px;
+            }
+    
+            #popup_all .delivery_popup_03 .popup_inner:before {
+                left: 308px;
+            }
+    
+            #popup_all .delivery_popup_03 .popup_content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+    
+            #popup_all .delivery_popup_03 .button_confirm {
+                margin: 390px auto 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_pop_confirm.png) no-repeat;
+                background-size: 430px 60px;
+                width: 430px;
+                height: 60px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 50px;
+            }
+    
+            #popup_all .delivery_popup_03 .btn_pop_close {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 42px;
+                height: 42px;
+                background-position: -522px -512px;
+            }
+    
+            #popup_all .delivery_popup_04 .popup_inner {
+                position: relative;
+                width: 1000px;
+                height: 500px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_pop_04.jpg) no-repeat;
+                background-size: 1000px 500px;
+            }
+    
+            #popup_all .delivery_popup_04 .popup_inner:before {
+                left: 308px;
+            }
+    
+            #popup_all .delivery_popup_04 .popup_content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+    
+            #popup_all .delivery_popup_04 .button_confirm {
+                margin: 390px auto 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_pop_confirm.png) no-repeat;
+                background-size: 430px 60px;
+                width: 430px;
+                height: 60px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 50px;
+            }
+    
+            #popup_all .delivery_popup_04 .btn_pop_close {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 42px;
+                height: 42px;
+                background-position: -522px -512px;
+            }
+        </style>

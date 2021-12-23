@@ -1,0 +1,2274 @@
+<div role="main" id="content" class="guide_content"><!-- 1) 캠페인 작업 영역 -->
+    <div id="campaign_wrap" class="campaign_wrap">
+        <!-- CSS -->
+        <style type="text/css">
+            .blind {
+                overflow: hidden;
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                clip: rect(0 0 0 0);
+            }
+    
+            a,
+            a:hover,
+            a:focus {
+                text-decoration: none;
+            }
+    
+            /* mixin */
+            /* //mixin */
+            .campaign_wrap {
+                font-family: NanumSquareWebFont, dotum, Sans-serif;
+                line-height: 1;
+            }
+    
+            .bonif_wrap {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+    
+            .bonif_wrap .inner {
+                width: 1000px;
+                margin: 0 auto;
+            }
+    
+            .bonif_wrap .btn_receive {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                width: 444px;
+                height: 84px;
+                background-position: 2px -109px;
+                cursor: default;
+            }
+    
+            .bonif_wrap .btn_receive.on {
+                background-position: 2px -16px;
+                cursor: pointer;
+            }
+    
+            .bonif_wrap .btn_receive_area {
+                margin-top: 26px;
+                text-align: center;
+            }
+    
+            .floating_nav {
+                position: fixed;
+                top: 160px;
+                right: 50%;
+                margin-right: -820px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_nav.png) 50% 0 no-repeat;
+                background-size: 216px 189px;
+                font-size: 0;
+                z-index: 20;
+                text-align: center;
+            }
+    
+            .floating_nav .inner {
+                width: 216px;
+                height: 189px;
+                margin: 0 auto;
+            }
+    
+            .count_area {
+                display: inline-block;
+                padding-top: 110px;
+                margin-left: -30px;
+            }
+    
+            .count_area .counter {
+                font-size: 28px;
+                font-weight: 800;
+                color: #5e2a2b;
+            }
+    
+            /* spot */
+            .together_spot {
+                height: 960px;
+                background: #fff url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_spot.jpg) no-repeat 50% 0;
+                background-size: 1920px 960px;
+            }
+    
+            .together_spot .inner {
+                position: relative;
+                height: 100%;
+            }
+    
+            .together_logo_link {
+                position: absolute;
+                top: 55px;
+                width: 83px;
+                height: 60px;
+            }
+    
+            /* ‘효’ 배달캠페인 */
+            .section_campagin {
+                position: relative;
+                background-color: #fff;
+            }
+    
+            .section_campagin .inner {
+                padding: 100px 0;
+            }
+    
+            .section_campagin .section_title {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/section_title_01.png) no-repeat 50% 0;
+                background-size: 670px 234px;
+                width: 670px;
+                height: 234px;
+                margin: 0 auto;
+            }
+    
+            .section_campagin .card_area {
+                height: 670px;
+                margin-top: 16px;
+                font-size: 0;
+                text-align: center;
+            }
+    
+            .section_campagin .card_title {
+                font-size: 48px;
+                letter-spacing: -1.2px;
+            }
+    
+            .section_campagin .card_text {
+                margin-top: 15px;
+                font-size: 24px;
+                letter-spacing: -0.6px;
+                line-height: 29px;
+                word-break: keep-all;
+            }
+    
+            .section_campagin [class^="card_front"],
+            .section_campagin [class^="card_back"] {
+                width: 235px;
+                height: 570px;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+            }
+    
+            .section_campagin [class^="card_back"] {
+                -webkit-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+                position: relative;
+                top: -570px;
+                padding: 100px 18px 0;
+                color: #fff;
+                text-align: center;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+    
+            .section_campagin .card_list {
+                display: inline-block;
+                margin: 0 10px;
+                vertical-align: middle;
+            }
+    
+            .section_campagin .card_list.on [class^="card_front"] {
+                -webkit-transform: rotateY(-180deg);
+                -ms-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+                width: 235px;
+                height: 570px;
+            }
+    
+            .section_campagin .card_list.on [class^="card_back"] {
+                -webkit-transform: rotateY(0);
+                -ms-transform: rotateY(0);
+                transform: rotateY(0);
+                width: 235px;
+                height: 570px;
+            }
+    
+            .section_campagin .card_list:first-child {
+                margin-left: 0;
+            }
+    
+            .section_campagin .card_list:last-child {
+                margin-right: 0;
+            }
+    
+            .section_campagin .card_list:nth-of-type(even) {
+                margin-top: 80px;
+            }
+    
+            .section_campagin .card_front_01 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_front_card1.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_back_01 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_back_card1.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_front_02 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_front_card2.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_back_02 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_back_card2.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_front_03 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_front_card3.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_back_03 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_back_card3.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_front_04 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_front_card4.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .card_back_04 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_back_card4.png) no-repeat;
+                background-size: 235px 570px;
+            }
+    
+            .section_campagin .btn_motion {
+                display: inline-block;
+                width: 175px;
+                height: 50px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_confirm.png) no-repeat;
+                background-size: 175px 50px;
+                margin-top: -70px;
+            }
+    
+            .section_campagin .count_area {
+                padding-top: 375px;
+            }
+    
+            .section_campagin .count_area .counter {
+                font-size: 44px;
+                color: #fff;
+            }
+    
+            /* 효배달 함께하기 */
+            .section_delivery {
+                height: 1500px;
+                background: #fff1da url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_desk.jpg) repeat-x 50% bottom;
+                background-size: 1920px 410px;
+            }
+    
+            .section_delivery .inner {
+                position: relative;
+                padding-top: 100px;
+            }
+    
+            .section_delivery .section_title {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/section_title_02.png) no-repeat 50% 0;
+                background-size: 846px 344px;
+                width: 846px;
+                height: 344px;
+                margin: 0 auto 60px;
+            }
+    
+            .section_delivery .list_area {
+                position: relative;
+                height: 100%;
+            }
+    
+            .section_delivery .delivery_area {
+                position: relative;
+                width: 1046px;
+                height: 970px;
+                margin: 0 auto;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_delivery1.jpg) 10px 221px no-repeat;
+                background-size: 1046px 758px;
+                margin-left: -30px;
+            }
+    
+            .section_delivery .delivery_area.stop::after {
+                content: none;
+            }
+    
+            .section_delivery .delivery_area:after {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                -webkit-animation: move_item_01 1.5s infinite;
+                animation: move_item_01 1.5s infinite;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 70px;
+                height: 90px;
+                background-position: 0 -464px;
+                z-index: 2;
+            }
+    
+            .section_delivery .delivery_area.item_01:after {
+                -webkit-animation: move_item_02 1.5s infinite;
+                animation: move_item_02 1.5s infinite;
+            }
+    
+            .section_delivery .delivery_area.item_01 .present_item_01 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_01.png) no-repeat;
+                background-size: 205px 149px;
+            }
+    
+            .section_delivery .delivery_area.item_01 .present_item_01:hover {
+                top: 34px;
+                left: 110px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_01.png) no-repeat;
+                background-size: 205px 149px;
+            }
+    
+            .section_delivery .delivery_area.item_02:after {
+                -webkit-animation: move_item_03 1.5s infinite;
+                animation: move_item_03 1.5s infinite;
+            }
+    
+            .section_delivery .delivery_area.item_02 .present_item_02 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_02.png) no-repeat;
+                background-size: 184px 148px;
+            }
+    
+            .section_delivery .delivery_area.item_02 .present_item_02:hover {
+                top: 34px;
+                left: 337px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_02.png) no-repeat;
+                background-size: 184px 148px;
+            }
+    
+            .section_delivery .delivery_area.item_03:after {
+                -webkit-animation: move_item_04 1.5s infinite;
+                animation: move_item_04 1.5s infinite;
+            }
+    
+            .section_delivery .delivery_area.item_03 .present_item_03 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_03.png) no-repeat;
+                background-size: 182px 143px;
+            }
+    
+            .section_delivery .delivery_area.item_03 .present_item_03:hover {
+                top: 34px;
+                left: 534px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_03.png) no-repeat;
+                background-size: 182px 143px;
+            }
+    
+            .section_delivery .delivery_area.item_04:after {
+                display: none;
+            }
+    
+            .section_delivery .delivery_area.item_04 .present_item_04 {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_04.png) no-repeat;
+                background-size: 192px 140px;
+            }
+    
+            .section_delivery .delivery_area.item_04 .present_item_04:hover {
+                top: 34px;
+                left: 739px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_04.png) no-repeat;
+                background-size: 192px 140px;
+            }
+    
+            .section_delivery .btn_receive_area {
+                position: absolute;
+                bottom: 71px;
+                left: 0;
+                right: 0;
+            }
+    
+            .section_delivery [class^="present_"] {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1000px;
+                height: 220px;
+                z-index: 1;
+            }
+    
+            .section_delivery .present_bubble {
+                position: absolute;
+                width: 940px;
+                height: 220px;
+                z-index: 1;
+                background-color: #fff;
+                border-radius: 200px;
+                margin-left: 50px;
+            }
+    
+            .section_delivery .present_item_01 {
+                top: 34px;
+                left: 110px;
+                margin-left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_01.png) no-repeat;
+                background-size: 205px 149px;
+                width: 230px;
+                height: 155px;
+            }
+    
+            .section_delivery .present_item_01:hover {
+                top: 20px;
+                left: 73px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_hover_01.png) no-repeat 10px 6px;
+                background-size: 239px 338px;
+                width: 310px;
+                height: 440px;
+            }
+    
+            .section_delivery .present_item_01:active {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_01.png) no-repeat;
+                background-size: 205px 149px;
+                width: 230px;
+                height: 155px;
+            }
+    
+            .section_delivery .present_item_01:focus {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_01.png) no-repeat;
+                background-size: 205px 149px;
+                width: 230px;
+                height: 155px;
+            }
+    
+            .section_delivery .present_item_02 {
+                top: 34px;
+                left: 337px;
+                margin-left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_02.png) no-repeat;
+                background-size: 184px 148px;
+                width: 190px;
+                height: 148px;
+            }
+    
+            .section_delivery .present_item_02:hover {
+                top: 26px;
+                left: 318px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_hover_02.png) no-repeat 10px 0;
+                background-size: 201px 249px;
+                width: 230px;
+                height: 305px;
+            }
+    
+            .section_delivery .present_item_02:active {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_02.png) no-repeat;
+                background-size: 184px 148px;
+                width: 184px;
+                height: 148px;
+            }
+    
+            .section_delivery .present_item_02:focus {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_02.png) no-repeat;
+                background-size: 184px 148px;
+                width: 184px;
+                height: 148px;
+            }
+    
+            .section_delivery .present_item_03 {
+                top: 34px;
+                left: 534px;
+                margin-left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_03.png) no-repeat;
+                background-size: 182px 143px;
+                width: 182px;
+                height: 143px;
+            }
+    
+            .section_delivery .present_item_03:hover {
+                top: 25px;
+                left: 518px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_hover_03.png) no-repeat 10px 0;
+                background-size: 197px 277px;
+                width: 210px;
+                height: 277px;
+            }
+    
+            .section_delivery .present_item_03:active {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_03.png) no-repeat;
+                background-size: 182px 143px;
+                width: 182px;
+                height: 143px;
+            }
+    
+            .section_delivery .present_item_03:focus {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_03.png) no-repeat;
+                background-size: 182px 143px;
+                width: 182px;
+                height: 143px;
+            }
+    
+            .section_delivery .present_item_04 {
+                top: 34px;
+                left: 739px;
+                margin-left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_04.png) no-repeat;
+                background-size: 192px 140px;
+                width: 192px;
+                height: 140px;
+            }
+    
+            .section_delivery .present_item_04:hover {
+                top: 27px;
+                left: 722px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_hover_04.png) no-repeat 10px 0;
+                background-size: 209px 240px;
+                width: 230px;
+                height: 277px;
+            }
+    
+            .section_delivery .present_item_04:active {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_04.png) no-repeat;
+                background-size: 192px 140px;
+                width: 192px;
+                height: 140px;
+            }
+    
+            .section_delivery .present_item_04:focus {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/present_defalut_04.png) no-repeat;
+                background-size: 192px 140px;
+                width: 192px;
+                height: 140px;
+            }
+    
+            .section_delivery .delivery_item_01 {
+                position: absolute;
+                left: -2px;
+                bottom: 288px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_01.png) 50% 0 no-repeat;
+                background-size: 213px 160px;
+                width: 213px;
+                height: 160px;
+            }
+    
+            .section_delivery .delivery_item_01.on {
+                left: -17px;
+                bottom: 241px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_on_01_v2.png) 50% 0 no-repeat;
+                background-size: 240px 183px;
+                width: 240px;
+                height: 200px;
+            }
+    
+            .section_delivery .delivery_item_01.on:after {
+                content: '';
+                position: absolute;
+                left: 115px;
+                bottom: 92px;
+                width: 182px;
+                height: 252px;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_motion_02.png) no-repeat 50% 0;
+                background-size: 182px 252px;
+            }
+    
+            .section_delivery .delivery_item_02 {
+                position: absolute;
+                left: 261px;
+                bottom: 288px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_02.png) 50% 0 no-repeat;
+                background-size: 194px 159px;
+                width: 194px;
+                height: 159px;
+            }
+    
+            .section_delivery .delivery_item_02.on {
+                left: 269px;
+                bottom: 296px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_on_02_v2.png) 50% 0 no-repeat;
+                background-size: 180px 144px;
+                width: 180px;
+                height: 144px;
+            }
+    
+            .section_delivery .delivery_item_02.on:after {
+                content: '';
+                position: absolute;
+                left: 85px;
+                bottom: 55px;
+                width: 182px;
+                height: 252px;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_motion_02.png) no-repeat 50% 0;
+                background-size: 182px 252px;
+            }
+    
+            .section_delivery .delivery_item_03 {
+                position: absolute;
+                left: 543px;
+                bottom: 288px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_03.png) 50% 0 no-repeat;
+                background-size: 201px 163px;
+                width: 201px;
+                height: 163px;
+            }
+    
+            .section_delivery .delivery_item_03.on {
+                left: 530px;
+                bottom: 264px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_on_03_v2.png) 50% 0 no-repeat;
+                background-size: 226px 178px;
+                width: 226px;
+                height: 178px;
+            }
+    
+            .section_delivery .delivery_item_03.on:after {
+                content: '';
+                position: absolute;
+                left: 80px;
+                bottom: 65px;
+                width: 182px;
+                height: 252px;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_motion_02.png) no-repeat 50% 0;
+                background-size: 182px 252px;
+            }
+    
+            .section_delivery .delivery_item_04 {
+                position: absolute;
+                left: 801px;
+                bottom: 288px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_04.png) 50% 0 no-repeat;
+                background-size: 230px 174px;
+                width: 230px;
+                height: 174px;
+            }
+    
+            .section_delivery .delivery_item_04.on {
+                left: 810px;
+                bottom: 296px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/delivery_item_on_04_v2.png) 50% 0 no-repeat;
+                background-size: 213px 156px;
+                width: 213px;
+                height: 156px;
+            }
+    
+            .section_delivery .delivery_item_04.on:after {
+                content: '';
+                position: absolute;
+                left: 94px;
+                bottom: 65px;
+                width: 182px;
+                height: 252px;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_motion_02.png) no-repeat 50% 0;
+                background-size: 182px 252px;
+            }
+    
+            /* 홀로 어르신 현황 */
+            .section_together_status {
+                background-color: #fbf7f3;
+            }
+    
+            .section_together_status .inner {
+                padding-top: 55px;
+                padding-bottom: 60px;
+            }
+    
+            .section_together_status .section_text {
+                font-size: 34px;
+                line-height: 45px;
+                letter-spacing: -0.5px;
+                text-align: center;
+                padding-bottom: 22px;
+            }
+    
+            .section_together_status .donation {
+                text-align: center;
+                font-size: 21px;
+                line-height: 50px;
+                letter-spacing: -0.3px;
+                color: #252525;
+            }
+    
+            .section_together_status .donation_number {
+                display: inline-block;
+                vertical-align: top;
+                font-size: 54px;
+                line-height: 50px;
+                letter-spacing: -0.5px;
+                color: #37af4b;
+                font-weight: 800;
+                margin-right: 5px;
+            }
+    
+            .section_together_status .unit {
+                font-size: 27px;
+                line-height: 50px;
+                letter-spacing: -0.5px;
+                color: #37af4b;
+                font-weight: 800;
+            }
+    
+            .section_together_status .section_box {
+                overflow: hidden;
+                height: 227px;
+                margin-top: 35px;
+            }
+    
+            .section_together_status .box_item {
+                position: relative;
+                float: left;
+                height: 100%;
+                color: #252525;
+            }
+    
+            .section_together_status .box_item+.box_item {
+                margin-left: 40px;
+            }
+    
+            .section_together_status .box_item+.box_item .thumb {
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/thumb_02.png);
+                background-size: 270px 227px;
+            }
+    
+            .section_together_status .box_item+.box_item dl dt {
+                color: #37af4b;
+            }
+    
+            .section_together_status .box_item .thumb {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/thumb_01.png);
+                background-size: 270px 227px;
+                width: 270px;
+                height: 227px;
+            }
+    
+            .section_together_status .box_item dl {
+                margin-left: 290px;
+                letter-spacing: -0.5px;
+            }
+    
+            .section_together_status .box_item dl dt {
+                font-size: 20px;
+                color: #f28b00;
+                padding-top: 17px;
+                padding-bottom: 10px;
+            }
+    
+            .section_together_status .box_item dl dd {
+                font-size: 24px;
+            }
+    
+            .section_together_status .box_item p {
+                font-size: 20px;
+                line-height: 27px;
+                letter-spacing: -0.3px;
+                padding-top: 17px;
+                margin-left: 290px;
+            }
+    
+            .section_together_status .box_item a {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 25px;
+                margin-left: 290px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_detail.png);
+                background-size: 120px 25px;
+                width: 120px;
+                height: 25px;
+            }
+    
+            /* 공유하기 배너 */
+            .section_share {
+                background-color: #f0e8e1;
+            }
+    
+            .section_share .inner {
+                padding: 17px 0;
+            }
+    
+            .section_share .api_band a {
+                display: block;
+                width: 70px;
+                height: 70px;
+            }
+    
+            .section_share .api_band img {
+                display: none;
+            }
+    
+            .section_share .inner:after {
+                display: block;
+                clear: both;
+                content: '';
+            }
+    
+            .section_share .sns_list {
+                float: left;
+                margin-right: 60px;
+            }
+    
+            .section_share .sns_item {
+                float: left;
+                margin: 20px 0;
+            }
+    
+            .section_share .sns_item+.sns_item {
+                margin-left: 29px;
+            }
+    
+            .section_share .sns_item:first-child {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                background-position: -70px -485px;
+            }
+    
+            .section_share .sns_item:first-child a:after{
+                content: none;
+            }
+    
+            .section_share .link_box {
+                display: block;
+                width: 70px;
+                height: 70px;
+            }
+    
+            .section_share .link_box:after {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                content: '';
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                vertical-align: middle;
+            }
+    
+            .section_share .sns_icon_facebook:after {
+                background-position: -341px -485px;
+            }
+    
+            .section_share .sns_icon_twitter:after {
+                background-position: -251px -485px;
+            }
+    
+            .section_share .sns_icon_kakaostory:after {
+                background-position: -161px -485px;
+            }
+    
+            .section_share .sns_text {
+                padding-top: 42px;
+                font-size: 27px;
+                color: #252525;
+                font-weight: 800;
+            }
+    
+            /* 댓글 응원하기 */
+            .section_comment .inner {
+                position: relative;
+                height: 100%;
+                padding: 93px 300px 17px 0;
+                text-align: left;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+    
+            .section_comment .img_bean {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+    
+            .section_comment .sec_title {
+                font-size: 34px;
+                line-height: 47px;
+                letter-spacing: -0.5px;
+            }
+    
+            .section_comment .accent {
+                color: #f28b00;
+            }
+    
+            .section_comment .comment_text {
+                margin: 14px 0 12px;
+                font-size: 22px;
+                line-height: 47px;
+                letter-spacing: -0.5px;
+                color: #777;
+            }
+    
+            .section_comment .comment_text span {
+                color: #21c531;
+            }
+    
+            .comment_info {
+                font-size: 0;
+                letter-spacing: -0.5px;
+                color: #777;
+            }
+    
+            .comment_info+.comment_info {
+                margin-top: 1px;
+            }
+    
+            .comment_info dt {
+                display: inline-block;
+                line-height: 32px;
+                font-size: 22px;
+                vertical-align: middle;
+            }
+    
+            .comment_info dd {
+                display: inline-block;
+                margin: 0 0 0 4px;
+                line-height: 32px;
+                font-size: 22px;
+                vertical-align: middle;
+            }
+    
+            .caution_text {
+                font-size: 19px;
+                line-height: 46px;
+                letter-spacing: -0.5px;
+                color: #afafaf;
+            }
+    
+            @-webkit-keyframes blink {
+                0% {
+                    opacity: 0;
+                }
+    
+                100% {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes blink {
+                0% {
+                    opacity: 0;
+                }
+    
+                100% {
+                    opacity: 1;
+                }
+            }
+    
+            @-webkit-keyframes move_item_01 {
+                0% {
+                    -webkit-transform: translate(185px, 100px);
+                    transform: translate(185px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(100px, 600px);
+                    transform: translate(100px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @keyframes move_item_01 {
+                0% {
+                    -webkit-transform: translate(185px, 100px);
+                    transform: translate(185px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(100px, 600px);
+                    transform: translate(100px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @-webkit-keyframes move_item_02 {
+                0% {
+                    -webkit-transform: translate(400px, 100px);
+                    transform: translate(400px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(320px, 600px);
+                    transform: translate(320px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @keyframes move_item_02 {
+                0% {
+                    -webkit-transform: translate(400px, 100px);
+                    transform: translate(400px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(320px, 600px);
+                    transform: translate(320px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @-webkit-keyframes move_item_03 {
+                0% {
+                    -webkit-transform: translate(600px, 100px);
+                    transform: translate(600px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(600px, 600px);
+                    transform: translate(600px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @keyframes move_item_03 {
+                0% {
+                    -webkit-transform: translate(600px, 100px);
+                    transform: translate(600px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(600px, 600px);
+                    transform: translate(600px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @-webkit-keyframes move_item_04 {
+                0% {
+                    -webkit-transform: translate(800px, 100px);
+                    transform: translate(800px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(900px, 600px);
+                    transform: translate(900px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            @keyframes move_item_04 {
+                0% {
+                    -webkit-transform: translate(800px, 100px);
+                    transform: translate(800px, 100px);
+                    opacity: 1;
+                }
+    
+                100% {
+                    -webkit-transform: translate(900px, 600px);
+                    transform: translate(900px, 600px);
+                    opacity: 0;
+                }
+            }
+    
+            /* 팝업 */
+            #popup_all .bonif_popup {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 150;
+            }
+    
+            #popup_all .popup_bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+    
+            #popup_all .popup_wrap {
+                display: table;
+                width: 100%;
+                height: 100%;
+            }
+    
+            #popup_all .popup {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+    
+            #popup_all .popup_inner {
+                display: inline-block;
+                position: relative;
+                width: 600px;
+                background-color: #fff;
+                border-radius: 40px;
+            }
+    
+            #popup_all .popup_inner:before {
+                content: '';
+                position: absolute;
+                top: -188px;
+                left: 111px;
+                width: 385px;
+                height: 251px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/icon_pop_title.png) no-repeat 50% 0;
+                background-size: 385px 251px;
+            }
+    
+            #popup_all .popup_logo {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                margin: 0 auto 19px;
+                width: 217px;
+                height: 59px;
+                background-position: -292px -495px;
+            }
+    
+            #popup_all .popup_content {
+                padding-top: 114px;
+            }
+    
+            #popup_all .popup_content .title {
+                font-size: 42px;
+                font-weight: 800;
+                line-height: 67px;
+                color: #3e3e3e;
+                letter-spacing: -0.4px;
+            }
+    
+            #popup_all .popup_content .title span {
+                color: #f28b00;
+            }
+    
+            #popup_all .popup_content .title span.green_text {
+                color: #37af4b;
+            }
+    
+            #popup_all .popup_content .title .small_text {
+                font-size: 29px;
+                color: #3e3e3e;
+            }
+    
+            #popup_all .popup_content .comment,
+            #popup_all .popup_content .information {
+                font-size: 29px;
+                line-height: 42px;
+                letter-spacing: -0.4px;
+                color: #3e3e3e;
+            }
+    
+            #popup_all .popup_content .comment {
+                margin-top: 12px;
+                margin-bottom: 52px;
+            }
+    
+            #popup_all .popup_content .information {
+                margin-top: 26px;
+                color: #3e3e3e;
+            }
+    
+            #popup_all .popup_content .information .amount {
+                margin-left: 6px;
+                margin-right: 6px;
+                font-size: 50px;
+                color: #37af4b;
+            }
+    
+            #popup_all .popup_content .link_my {
+                display: inline-block;
+                font-size: 22px;
+                line-height: 67px;
+                color: #37af4b;
+                margin-top: 8px;
+                margin-bottom: 20px;
+            }
+    
+            #popup_all .popup_content .button_confirm {
+                display: block;
+                padding: 17px 50px;
+                border-radius: 50px;
+                width: 230px;
+                background-color: #5e2a2b;
+                margin: 0 auto 60px;
+                font-size: 26px;
+                color: #fff;
+                font-weight: bold;
+            }
+    
+            #popup_all .popup_content .button_close {
+                position: absolute;
+                top: 30px;
+                right: 27px;
+                padding: 22px 24px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                background-position: -518px -512px;
+            }
+    
+            #popup_all #popup_login .title {
+                line-height: 54px;
+            }
+    
+            #popup_all #popup_login .popup_content .comment {
+                margin-top: 18px;
+            }
+    
+            #popup_all #popup_success .popup_content {
+                padding-top: 94px;
+            }
+    
+            #popup_all #popup_success .title {
+                font-size: 42px;
+                line-height: 56px;
+            }
+    
+            #popup_all #popup_success .comment {
+                margin-top: 20px;
+                font-size: 29px;
+            }
+    
+            #popup_all #popup_end .popup_content {
+                padding-top: 102px;
+            }
+    
+            #popup_all #popup_end .popup_content .title {
+                line-height: 56px;
+            }
+    
+            #popup_all #popup_end .popup_content .comment {
+                margin-top: 22px;
+            }
+    
+            #popup_all #popup_already .popup_content {
+                padding-top: 102px;
+            }
+    
+            #popup_all #popup_already .popup_content .title {
+                line-height: 56px;
+            }
+    
+            #popup_all #popup_already .popup_content .comment {
+                margin-top: 22px;
+            }
+    
+            #popup_all .delivery_popup_01 .popup_inner {
+                position: relative;
+                width: 1000px;
+                height: 500px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_pop_01.jpg) no-repeat;
+                background-size: 1000px 500px;
+            }
+    
+            #popup_all .delivery_popup_01 .popup_inner:before {
+                left: 308px;
+            }
+    
+            #popup_all .delivery_popup_01 .popup_content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+    
+            #popup_all .delivery_popup_01 .button_confirm {
+                margin: 390px auto 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_pop_confirm.png) no-repeat;
+                background-size: 430px 60px;
+                width: 430px;
+                height: 60px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 50px;
+            }
+    
+            #popup_all .delivery_popup_01 .btn_pop_close {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 42px;
+                height: 42px;
+                background-position: -522px -512px;
+            }
+    
+            #popup_all .delivery_popup_02 .popup_inner {
+                position: relative;
+                width: 1000px;
+                height: 500px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_pop_02.jpg) no-repeat;
+                background-size: 1000px 500px;
+            }
+    
+            #popup_all .delivery_popup_02 .popup_inner:before {
+                left: 308px;
+            }
+    
+            #popup_all .delivery_popup_02 .popup_content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+    
+            #popup_all .delivery_popup_02 .button_confirm {
+                margin: 390px auto 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_pop_confirm.png) no-repeat;
+                background-size: 430px 60px;
+                width: 430px;
+                height: 60px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 50px;
+            }
+    
+            #popup_all .delivery_popup_02 .btn_pop_close {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 42px;
+                height: 42px;
+                background-position: -522px -512px;
+            }
+    
+            #popup_all .delivery_popup_03 .popup_inner {
+                position: relative;
+                width: 1000px;
+                height: 500px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_pop_03.jpg) no-repeat;
+                background-size: 1000px 500px;
+            }
+    
+            #popup_all .delivery_popup_03 .popup_inner:before {
+                left: 308px;
+            }
+    
+            #popup_all .delivery_popup_03 .popup_content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+    
+            #popup_all .delivery_popup_03 .button_confirm {
+                margin: 390px auto 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_pop_confirm.png) no-repeat;
+                background-size: 430px 60px;
+                width: 430px;
+                height: 60px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 50px;
+            }
+    
+            #popup_all .delivery_popup_03 .btn_pop_close {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 42px;
+                height: 42px;
+                background-position: -522px -512px;
+            }
+    
+            #popup_all .delivery_popup_04 .popup_inner {
+                position: relative;
+                width: 1000px;
+                height: 500px;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/bg_pop_04.jpg) no-repeat;
+                background-size: 1000px 500px;
+            }
+    
+            #popup_all .delivery_popup_04 .popup_inner:before {
+                left: 308px;
+            }
+    
+            #popup_all .delivery_popup_04 .popup_content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+    
+            #popup_all .delivery_popup_04 .button_confirm {
+                margin: 390px auto 0;
+                background: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/btn_pop_confirm.png) no-repeat;
+                background-size: 430px 60px;
+                width: 430px;
+                height: 60px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 50px;
+            }
+    
+            #popup_all .delivery_popup_04 .btn_pop_close {
+                background-image: url(https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/sp_bonif.png);
+                background-repeat: no-repeat;
+                background-size: 946px 554px;
+                -webkit-background-size: 946px 554px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                width: 42px;
+                height: 42px;
+                background-position: -522px -512px;
+            }
+        </style>
+        <!-- 네비게이션 -->
+        <!-- [D] 댓글 영역에 도달할 경우 nav 제거해주세요. aria-hidden="true" -->
+        <nav id="floating_nav" class="floating_nav" aria-hidden="false">
+            <div class="inner">
+                <div class="count_area">
+                    캠페인 참여 <strong id="participationCount" class="counter 01">36,285</strong> 건
+                </div>
+            </div>
+        </nav>
+        <!-- // 네비게이션 -->
+        <!-- 캠페인 본문 -->
+        <div id="bonif_wrap" class="bonif_wrap">
+    
+            <!-- spot -->
+            <div class="together_spot">
+                <div class="inner">
+                    <h2 class="together_logo">
+                        <a href="https://www.bonif.co.kr" target="_blank" class="together_logo_link">
+                            <span class="blind">bonif</span>
+                        </a>
+                    </h2>
+                    <h3 class="blind">영유아부터 어르신까지 결식이 우려되는 이웃들을 위해
+                        본그룹이 생애주기에 맞춰 든든한 식사를 나눕니다.
+    
+                        끼니마다 걱정으로 채워지던 식탁이 따스한 정성으로 풍성해지는 나눔의 순간에 여러분도 함께해 주세요!
+                    </h3>
+                </div>
+            </div>
+    
+            <!-- 식사 나눔 -->
+            <div id="section_campagin" class="section_campagin">
+                <div class="inner">
+                    <h3 class="section_title">
+                                <span class="blind">영유아부터 어르신까지 정성을 모아 전달하는 든든한 식사 나눔
+                                    모두 확인 시, ID당 콩 1개 지급</span>
+                    </h3>
+                    <div class="card_area">
+                        <ul>
+    
+                            <!-- [D] button 클릭시 on클래스 추가 부탁드립니다 -->
+                            <li class="card_list">
+                                <button type="button" class="card_front_01">
+                                    <strong class="blind">확인하기</strong>
+                                    <span class="btn_motion"></span>
+                                </button>
+                                <div class="card_back_01">
+                                    <div class="count_area">
+                                                <span class="blind">행복 냠냠키트 베이비 본죽 - 영유아 사회복지시설 등에 이유식을 비롯한 영유아 식품을
+                                                    나눕니다.</span>
+                                        <!-- [D] 카드 오픈 시 숫자 카운트 모션 적용 부탁드립니다 -->
+                                        <strong class="counter 02">32,689</strong>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <!-- [D] button 클릭시 on클래스 추가 부탁드립니다 -->
+                            <li class="card_list">
+                                <button type="button" class="card_front_02">
+                                    <strong class="blind">확인하기</strong>
+                                    <span class="btn_motion"></span>
+                                </button>
+                                <div class="card_back_02">
+                                    <div class="count_area">
+                                        <span class="blind">어르신 본죽 왔어요 - 결식우려 어르신에게 정기적으로 본죽을 나누고 안부를 확인합니다.</span>
+                                        <!-- [D] 카드 오픈 시 숫자 카운트 모션 적용 부탁드립니다 -->
+                                        <strong class="counter 03">86,044</strong>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <!-- [D] button 클릭시 on클래스 추가 부탁드립니다 -->
+                            <li class="card_list">
+                                <button type="button" class="card_front_03">
+                                    <strong class="blind">확인하기</strong>
+                                    <span class="btn_motion"></span>
+                                </button>
+                                <div class="card_back_03">
+                                    <div class="count_area">
+                                        <span class="blind">주말도 든든하게 - 결식이 우려되는 아동청소년을 위해 도시락을 나눕니다.</span>
+                                        <!-- [D] 카드 오픈 시 숫자 카운트 모션 적용 부탁드립니다 -->
+                                        <strong class="counter 04">49,611</strong>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <!-- [D] button 클릭시 on클래스 추가 부탁드립니다 -->
+                            <li class="card_list">
+                                <button type="button" class="card_front_04">
+                                    <strong class="blind">확인하기</strong>
+                                    <span class="btn_motion"></span>
+                                </button>
+                                <div class="card_back_04">
+                                    <div class="count_area">
+                                        <span class="blind">우리동네 나눔 챌린지 - 결식우려 이웃을 위해 따뜻하고 든든한 설렁탕을 선물합니다.</span>
+                                        <!-- [D] 카드 오픈 시 숫자 카운트 모션 적용 부탁드립니다 -->
+                                        <strong class="counter 05">11,040</strong>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_receive_area">
+    
+                        <!-- [D] 버튼 활성화 시 on클래스 추가부탁드립니다. -->
+                        <button id="firstBean" type="button" class="btn_receive">
+                            <span class="blind">확인했어요 콩 받기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 식사 전달 -->
+            <div id="section_delivery" class="section_delivery">
+                <div class="inner">
+                    <h3 class="section_title">
+                        <span class="blind">따뜻한 식사 왔어요~ 이웃의 식탁을 채우는 따뜻한 식사 나눔, 모두 확인 시 ID당 콩 1개 지급 및 1,000원 매칭 기부</span>
+                    </h3>
+                    <!--
+                        [D] 드래그 시 아래 클래스 추가 부탁드립니다.
+                        li.present_item_01 드래그 하여 맞췄을 경우 : item_01 클래스 추가
+                        li.present_item_02 드래그 하여 맞췄을 경우 : item_02 클래스 추가,
+                        li.present_item_03 드래그 하여 맞췄을 경우 : item_03 클래스 추가,
+                        li.present_item_04 드래그 하여 맞췄을 경우 : item_04 클래스 추가,
+                        drag_item 드래그 시 stop 클래스 추가 부탁드립니다.
+                    -->
+                    <div class="delivery_area item_01">
+                        <div class="present_bubble">
+                        </div>
+                        <div class="list_area">
+                            <ul class="present_list">
+                                <!-- [D] 드래그 이동 후 hover 이벤트 방지, 원위치로 이동 부탁드립니다. -->
+                                <li class="present_item_01 drag_item ui-draggable ui-draggable-handle secondQuizEnd ui-draggable-disabled" style="left: 73px; top: 20px;">
+                                    <span class="blind">베이비 본죽</span>
+                                </li>
+                                <!-- [D] 드래그 이동 후 hover 이벤트 방지, 원위치로 이동 부탁드립니다. -->
+                                <li class="present_item_02 drag_item ui-draggable ui-draggable-handle">
+                                    <span class="blind">본죽</span>
+                                </li>
+                                <!-- [D] 드래그 이동 후 hover 이벤트 방지, 원위치로 이동 부탁드립니다. -->
+                                <li class="present_item_03 drag_item ui-draggable ui-draggable-handle">
+                                    <span class="blind">도시락</span>
+                                </li>
+                                <!-- [D] 드래그 이동 후 hover 이벤트 방지, 원위치로 이동 부탁드립니다. -->
+                                <li class="present_item_04 drag_item ui-draggable ui-draggable-handle">
+                                    <span class="blind">설렁탕</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="delivery_item">
+                            <!-- [D] 드래그 하여 맞췄을 경우 on 클래스 추가 -->
+                            <span class="delivery_item_01 ui-droppable on"></span>
+                            <!-- [D] 드래그 하여 맞췄을 경우 on 클래스 추가 -->
+                            <span class="delivery_item_02 ui-droppable"></span>
+                            <!-- [D] 드래그 하여 맞췄을 경우 on 클래스 추가 -->
+                            <span class="delivery_item_03"></span>
+                            <!-- [D] 드래그 하여 맞췄을 경우 on 클래스 추가 -->
+                            <span class="delivery_item_04"></span>
+                        </div>
+                    </div>
+                    <div class="btn_receive_area">
+                        <!-- [D] 버튼 활성화 시 on클래스 추가부탁드립니다. -->
+                        <button id="secondBean" type="button" class="btn_receive">
+                            <span class="blind">확인했어요 콩 받기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 이웃 기부 -->
+            <div id="section_together_status" class="section_together_status">
+                <div class="inner">
+                    <h3 class="blind">
+                        결식이 우려되는 이웃들을 위한 기부 캠페인
+                    </h3>
+                    <p class="section_text">
+                        여러분의 참여로 조성된 매칭기부금은<br> <strong>결식이 우려되는 이웃들에게 건강한 식사</strong>로 전달됩니다.
+                    </p>
+                    <p class="donation">
+                        <span id="donationAmount" class="donation_number">6,000,000</span> <span class="unit">원</span> / 최대 600만원
+                    </p>
+    
+                    <div class="section_box">
+                        <div class="box_item">
+                            <div class="thumb"></div>
+                            <dl>
+                                <dt>어르신</dt>
+                                <dd>어르신의 빈 쌀통</dd>
+                            </dl>
+                            <p>하루 한끼 식사, <br>
+                                결식 독거 어르신들의 <br>
+                                쌀통을 채워주세요.</p>
+                            <a href="https://happybean.naver.com/donations/H000000179862" target="blank" class="btn_detail"><span class="blind">자세히보기</span></a>
+                        </div>
+                        <div class="box_item">
+                            <div class="thumb"></div>
+                            <dl>
+                                <dt>아동 · 청소년</dt>
+                                <dd>먹고 싶어도 참아요</dd>
+                            </dl>
+                            <p>모자원에서 생활하는<br>
+                                한부모가정에<br>
+                                식료품을 전해주세요.</p>
+                            <a href="https://happybean.naver.com/donations/H000000180182" target="blank" class="btn_detail"><span class="blind">자세히보기</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- sns -->
+            <!--<script type="text/javascript" src="//developers.band.us/js/share/band-button.js?v=04102018"></script>
+            <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>-->
+            <div class="section_share">
+                <div class="inner">
+                    <ul class="sns_list">
+                        <li class="sns_item">
+                            <a href="#event_share" class="sns_icon_band link_box" data-type="band">
+    
+                                <span class="blind">밴드 공유하기</span>
+                            </a>
+                        </li>
+                        <li class="sns_item">
+                            <a href="#event_share" class="link_box sns_icon_facebook" data-type="facebook">
+                                <span class="blind">페이스북 공유하기</span>
+                            </a>
+                        </li>
+                        <li class="sns_item">
+                            <a href="#event_share" class="link_box sns_icon_twitter" data-type="twitter">
+                                <span class="blind">트위터 공유하기</span>
+                            </a>
+                        </li>
+                        <li class="sns_item">
+                            <a href="#event_share" class="link_box sns_icon_kakaostory" data-type="kakaostory">
+                                <span class="blind">카카오스토리 공유하기</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="sns_text">
+                        &lt; 한 숟가락 큰 나눔 캠페인 &gt;을 공유해주세요.
+                    </p>
+                </div>
+            </div>
+            <!-- // sns -->
+    
+            <!-- 댓글 응원하기 -->
+            <div class="section_comment" id="eventComment">
+                <div class="inner">
+                    <h3 class="sec_title">결식 사각지대가 없도록 이웃들의 식탁을 채우는 <br>
+                        <strong class="accent">한 숟가락 큰 나눔 캠페인</strong>을 댓글로 응원해주세요!</h3>
+                    <p class="comment_text">참여 댓글 ID당 <span>콩 1개</span>를 드립니다.</p>
+                    <dl class="comment_info">
+                        <dt><em>참여기간 : </em></dt>
+                        <dd>2021년 9월 14일 ~ 2021년 10월 14일</dd>
+                    </dl>
+                    <dl class="comment_info">
+                        <dt><em>콩 지급일자 :</em></dt>
+                        <dd>2021년 10월 15일</dd>
+                    </dl>
+                    <p class="caution_text">무성의, 반복, 악성 댓글에는 콩이 지급되지 않습니다.</p>
+                    <div class="img_bean">
+                        <img src="https://ssl.pstatic.net/happyimg2/img3/event/campaign/202109/bonif/pc/img_comment.png" width="363" height="325" alt="결식이 우려되는 이웃들을 위한 본그룹의 한 숟가락 큰 나눔 캠페인!">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // 캠페인 본문 -->
+        <!-- 팝업 -->
+        <div id="popup_all">
+            <!-- [D] 팝업 오픈, 닫기
+                기존 layer_OPEN, layer_CLOSE 함수 사용해주세요.
+            -->
+            <!-- 비로그인 팝업 -->
+            <div id="popup_login" class="bonif_popup" style="display:none;">
+                <div class="popup_bg" onclick="layer_CLOSE('#popup_login');"></div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_inner">
+                            <div class="popup_content">
+                                <strong class="title"><span>비로그인</span> 상태입니다</strong>
+                                <p class="comment">비로그인 상태에서는 <br>참여 리워드가 지급되지 않습니다</p>
+                                <a href="#self" class="button_confirm" onclick="goLogin()">로그인</a>
+                                <a href="#" class="button_close" onclick="layer_CLOSE('#popup_login'); return false;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 정상 참여 팝업 -->
+            <div id="popup_success" class="bonif_popup" style="display: none">
+                <div class="popup_bg" onclick="layer_CLOSE('#popup_success');"></div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_inner">
+                            <div class="popup_content">
+                                <strong class="title">
+                                    <span>캠페인</span><span class="small_text">에 참여해 주셔서 감사합니다</span><br><span class="green_text">콩 1개</span><span class="small_text">를 받으셨습니다</span>
+                                </strong>
+                                <p id="userInfo" class="information">
+                                    <span class="info_txt">유저ID님의 보유 콩 개수 </span> <strong class="amount">00</strong>개
+                                </p>
+                                <a href="http://happybean.naver.com/my/MyCongUsingDetailMain?_ga=2.100577053.2064225551.1592791468-81107093.1553481315" target="_blank" class="link_my">My해피빈 바로 가기 &gt;</a>
+                                <a href="#" class="button_confirm" onclick="layer_CLOSE('#popup_success'); return false;">확인</a>
+                                <a href="#" class="button_close" onclick="layer_CLOSE('#popup_success'); return false;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 캠페인종료 팝업 -->
+            <div id="popup_end" class="bonif_popup" style="display:none;">
+                <div class="popup_bg" onclick="layer_CLOSE('#popup_end');"></div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_inner">
+                            <div class="popup_content">
+                                <strong class="title"><span>캠페인이 종료</span>되어<br>콩이 지급되지 않습니다</strong>
+                                <p class="comment">참여해 주셔서 감사합니다!</p>
+                                <a href="#" class="button_confirm" onclick="layer_CLOSE('#popup_end'); return false;">확인</a>
+                                <a href="#" class="button_close" onclick="layer_CLOSE('#popup_end'); return false;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 캠페인 이미참여 팝업 -->
+            <div id="popup_already" class="bonif_popup" style="display:none;">
+                <div class="popup_bg" onclick="layer_CLOSE('#popup_already');"></div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_inner">
+                            <div class="popup_content">
+                                <strong class="title"><span>캠페인에 이미 참여</span>하여<br>콩이 지급되지 않습니다</strong>
+                                <p class="comment">참여해 주셔서 감사합니다!</p>
+                                <a href="#" class="button_confirm" onclick="layer_CLOSE('#popup_already'); return false;">확인</a>
+                                <a href="#" class="button_close" onclick="layer_CLOSE('#popup_already'); return false;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 영유아 카드 팝업 -->
+            <div id="popup_delivery_01" class="bonif_popup delivery_popup_01" style="display: none; opacity: 0;">
+                <div class="popup_bg" onclick="layer_CLOSE('#popup_delivery_01');"></div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_inner">
+                            <div class="popup_content">
+                                <span class="blind">행복냠냠 키트</span>
+                                <p class="blind">우리 아이를 위한 풍성한 먹거리를
+                                    지원해주셔서 감사해요.
+                                    아이가 잘 먹는 게 가장 큰 행복이랍니다!</p>
+                            </div>
+                            <a href="#" class="button_confirm" onclick="layer_CLOSE('#popup_delivery_01'); return false;"></a>
+                            <a href="#" class="btn_pop_close" onclick="layer_CLOSE('#popup_delivery_01'); return false;">
+                                <span class="blind">닫기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 어르신 카드 팝업 -->
+            <div id="popup_delivery_02" class="bonif_popup delivery_popup_02" style="display:none;">
+                <div class="popup_bg" onclick="layer_CLOSE('#popup_delivery_02');"></div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_inner">
+                            <div class="popup_content">
+                                <span class="blind">어르신, 본죽 왔어요!</span>
+                                <p class="blind">매주 찾아오는 본죽 덕분에
+                                    식사의 즐거움을 찾았어요! 적적했던 마음에
+                                    삶의 원동력이 가득 채워졌습니다.</p>
+                            </div>
+                            <a href="#" class="button_confirm" onclick="layer_CLOSE('#popup_delivery_02'); return false;"></a>
+                            <a href="#" class="btn_pop_close" onclick="layer_CLOSE('#popup_delivery_02'); return false;">
+                                <span class="blind">닫기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 아동청소년 카드 팝업 -->
+            <div id="popup_delivery_03" class="bonif_popup delivery_popup_03" style="display:none;">
+                <div class="popup_bg" onclick="layer_CLOSE('#popup_delivery_03');"></div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_inner">
+                            <div class="popup_content">
+                                <span class="blind">주말도 든든하게</span>
+                                <p class="blind">주말마다 편의점에서 라면으로
+                                    대충 먹곤 했는데, 매주 다른 메뉴의
+                                    든든한 도시락을 먹을 수 있어서 좋아요!</p>
+                            </div>
+                            <a href="#" class="button_confirm" onclick="layer_CLOSE('#popup_delivery_03'); return false;"></a>
+                            <a href="#" class="btn_pop_close" onclick="layer_CLOSE('#popup_delivery_03'); return false;">
+                                <span class="blind">닫기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 지역사회 카드 팝업 -->
+            <div id="popup_delivery_04" class="bonif_popup delivery_popup_04" style="display:none;">
+                <div class="popup_bg" onclick="layer_CLOSE('#popup_delivery_04');"></div>
+                <div class="popup_wrap">
+                    <div class="popup">
+                        <div class="popup_inner">
+                            <div class="popup_content">
+                                <span class="blind">우리동네 나눔 챌린지</span>
+                                <p class="blind">코로나와 무더위로 건강한 먹거리를
+                                    챙기기 쉽지 않았는데 긴급 지원 덕분에
+                                    특별한 식사를 할 수 있게 되었어요!</p>
+                            </div>
+                            <a href="#" class="button_confirm" onclick="layer_CLOSE('#popup_delivery_04'); return false;"></a>
+                            <a href="#" class="btn_pop_close" onclick="layer_CLOSE('#popup_delivery_04'); return false;">
+                                <span class="blind">닫기</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <!-- // 팝업 -->
+    </div>
+    <!-- // 1) 캠페인 작업 영역 -->
+    
+    <!-- 2) 스크립트 영역 -->
+    <!--<script type="text/javascript" src="https://ssl.pstatic.net/happyimg2/img3/event/campaign/common/js/hbean_event.js"
+            charset="UTF-8"></script>
+    <script src="https://ssl.pstatic.net/happyimg2/img3/event/campaign/common/js/hbean_api.2.0.min.js"></script>
+    <script
+            src="https://ssl.pstatic.net/happyimg2/img3/event/campaign/202107/2021pampersclub/pc_v1/js/jquery.counterup.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    &lt;!&ndash; swiper 있는 경우 사용하는 경우 아래 코드 넣어주세요. &ndash;&gt;
+    <script src="https://ssl.pstatic.net/happyimg2/img3/event/campaign/swiper-4.5.1.min.js"></script>-->
+    
+    <script>
+        //댓글영역 도달 시 nav 제거
+        $(window).scroll(function () {
+            var eventComment = $J('#eventComment').offset().top;
+            var $winst = $J(this).scrollTop();
+            if ($winst > eventComment + 300) {
+                $J('#floating_nav').attr("aria-hidden", true);
+            } else {
+                $J('#floating_nav').attr("aria-hidden", false);
+            };
+        });
+    </script>
+    <script>
+        //swiper
+        var swiper = new Swiper(".status_slide", {
+            direction: "vertical",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    
+    <script>
+        //숫자 카운트
+        $J(document).ready(function(){
+            hbApi.getHistCnt({campaignNo:campaignNo}, function(res){
+                let participationCount = res.result;
+                $J('#participationCount').text((participationCount).toLocaleString('ko-kr'));
+    
+                $J('.counter.01').counterUp({
+                    delay: 10,
+                    time: 1000
+                });
+            });
+    
+            //카드 뒤집기
+            //지원물품 수량 숫자 카운트 (처음 노출시 모션 적용)
+            $J('.card_list button').click(function () {
+                $J(this).parent('.card_list').addClass('on');
+                let cardClassStr = $J(this).attr('class');
+                let cardClassLength = cardClassStr.length;
+                let order = (cardClassStr.slice(cardClassLength - 2, cardClassLength) * 1) + 1;
+    
+                $J('.counter.0' + order).counterUp({
+                    delay: 10,
+                    time: 1000
+                });
+    
+                $J(this).addClass('firstQuizEnd');
+                if($J('.firstQuizEnd').length === 4){
+                    $J('#firstBean').addClass('on');
+                }
+            });
+        });
+    
+    
+        let totalAmountData = {
+            campaignNo: campaignNo,
+            serviceIdList: ['boncsr2021_2']
+        };
+    
+        hbApi.getUniqueHistCnt(totalAmountData, function (res) {
+            let amount = res.result * 1000 > 6000000 ? 6000000 : res.result * 1000
+    
+            $J('#donationAmount').text(amount.toLocaleString('ko-kr'));
+        });
+    
+    
+    
+        var checkSecondQuizEnd = function () {
+            if($J('.secondQuizEnd').length === 4){
+                $J('#secondBean').addClass('on');
+            }
+        };
+    
+        //함께하기 선물 드래그
+        $J(".drag_item").draggable({
+            containment: ".delivery_area",
+            revert: true
+        });
+    
+        var activateNextButton = function (currentIndex) {
+            $J('.delivery_area').addClass('item_0' + currentIndex);
+    
+            let nextIndex = undefined;
+            $J('.drag_item').each(function(index){
+                if(!$J(this).hasClass('secondQuizEnd')){
+                    nextIndex = index;
+                    return false;
+                }
+            });
+    
+            if(nextIndex === undefined){
+                $J('.delivery_area').addClass('stop');
+            }else{
+                nextIndex += 1;
+                $J('.delivery_item_0' + nextIndex).droppable({
+                    accept: '.present_item_0'+ nextIndex,
+                    drop: function(event, ui){
+                        $J(event.target).addClass('on');
+                        $J(ui.draggable).addClass('secondQuizEnd');
+                        $J(ui.draggable).draggable('disable');
+    
+                        layer_OPEN('#popup_delivery_0'+ nextIndex);
+    
+                        activateNextButton(nextIndex);
+                        checkSecondQuizEnd();
+                    }
+                });
+            }
+        };
+    
+        $J('.delivery_item_01').droppable({
+            accept: '.present_item_01',
+            drop: function(event, ui){
+                $J(event.target).addClass('on');
+                $J(ui.draggable).addClass('secondQuizEnd');
+                $J(ui.draggable).draggable('disable');
+    
+                layer_OPEN('#popup_delivery_01');
+    
+                activateNextButton(1);
+                checkSecondQuizEnd();
+            }
+        });
+    
+    </script>
+    
+    <script language="javascript" type="text/javascript">
+        //레이어 오픈
+        var layer_OPEN = function (obj_selector) {
+            var obj = $J(obj_selector);
+            obj.css({
+                'display': 'block',
+                'opacity': 0
+            });
+            obj.stop().animate({
+                'opacity': 1
+            }, 500);
+        };
+    
+        //레이어 클로즈
+        var layer_CLOSE = function (obj_selector) {
+            var obj = $J(obj_selector);
+            obj.stop().animate({
+                'opacity': 0
+            }, 500, function () {
+                $J(this).css({
+                    'display': 'none'
+                });
+            });
+        };
+    </script>
+    <script type="text/javascript">
+        var $J = jQuery.noConflict();
+        var isLocalStorageSupported = hbEvent.l_isLocalStorageSupport(); // 로컬 스토리지 사용가능 여부
+        var domainUrl = window.location.protocol + "//" + window.location.host;
+    
+        /* 로그인 */
+        var goLogin = function () {
+            if (hbApi.scopeVar.sectionIdx > 0) {
+                if (isLocalStorageSupported) {
+                    sessionStorage.setItem(hbApi.scopeVar.serviceId, hbApi.scopeVar.sectionIdx);
+                }
+            }
+            var targetUrl = domainUrl + "/campaign/boncsr";
+            document.location = "https://nid.naver.com/nidlogin.login?url=" + encodeURIComponent(targetUrl);
+        };
+    
+        var option = {
+            serviceId: 'boncsr2021'
+            , notLoginObj: '#popup_login' //비로그인 팝업 obj
+            , fnDonationCallback: function (res) {
+                $J("#section_contribution .total strong").text(res);
+            }
+        };
+    
+        /* 캠페인 초기화 */
+        hbApi.init(option, function (res) {
+            // 비로그인 참여
+            if (isLocalStorageSupported) {
+                var sessionStorageVal = sessionStorage.getItem(hbApi.scopeVar.serviceId);
+                if (sessionStorageVal != null) {
+                    hbApi.scopeVar.sectionIdx = sessionStorageVal;
+                    let idx = sessionStorageVal *= 1;
+                    let scopeId = '';
+                    if (idx === 1) {
+                        scopeId = '#section_delivery'
+                    }else if(idx === 2){
+                        scopeId = '#section_together_status'
+                    }
+    
+                    $J(document).scrollTop($J(scopeId).offset().top);
+                    getBean(sessionStorageVal);
+                    // 삭제
+                    sessionStorage.removeItem(hbApi.scopeVar.serviceId);
+                }
+            }
+        });
+    
+        var getBean = function (idx) {
+            hbApi.getBean(idx, null, function (res) {
+                var result = res.result;
+                var code = result.result;
+                if (code == "SUCCESS") {
+                    $J("#userInfo").html(
+                        '<span class="info_txt">' + hbApi.nick + '님의 보유 콩 개수 </span> <strong class="amount">' + result.holdingCongCount + '</strong>개'
+                    );
+                    layer_OPEN('#popup_success');
+                } else if (code == "NOTLOGIN") {
+                    layer_OPEN('#popup_login');
+                } else if (code == "END") {
+                    layer_OPEN('#popup_end');
+                } else if (code == "DUPLICATION") {
+                    layer_OPEN('#popup_already');
+                }
+            });
+    
+            idx *= 1;
+            let scopeId = '';
+            if (idx === 1) {
+                scopeId = '#section_delivery'
+            }else if(idx === 2){
+                scopeId = '#section_together_status'
+            }
+    
+            $J('html, body').animate({
+                scrollTop: $J(scopeId).offset().top
+            }, 1000);
+        };
+    
+        $J(function () {
+            /*공유 */
+            Kakao.init("893d11da5c81ebc6ec67dc69f79ced44");
+            $J(".sns_list .link_box").click(function () {
+                var og_tit = $J("#ogTitle").attr("content");
+                var share_url = $J("#ogUrl").attr("content");
+                var img_url = $J("#ogImage").attr("content");
+                var gubun = $J(this).data("type");
+                if (gubun == "facebook") {
+                    hbEvent.sns().Facebook(share_url);
+                } else if (gubun == "twitter") {
+                    hbEvent.sns().Twitter(share_url, og_tit);
+                } else if (gubun == "kakaostory") {
+                    hbEvent.sns().KakaoStory(share_url, og_tit);
+                } else if (gubun == "band") {
+                    hbEvent.sns().Band(share_url, og_tit, img_url);
+                }
+            });
+        });
+    
+        $J('#firstBean').click(function(){
+            if($J(this).hasClass('on')){
+                getBean(1);
+            }
+        });
+    
+        $J('#secondBean').click(function(){
+            if($J(this).hasClass('on')){
+                getBean(2);
+            }
+        });
+    </script>
+    <!-- // 2) 스크립트 영역 --><!-- 본문 -->
+    <script>
+        let scriptSourceList = ['//developers.band.us/js/share/band-button.js?v=04102018','//developers.kakao.com/sdk/js/kakao.min.js','https://ssl.pstatic.net/happyimg2/img3/event/campaign/common/js/hbean_event.js','https://ssl.pstatic.net/happyimg2/img3/event/campaign/common/js/hbean_api.2.0.js','https://ssl.pstatic.net/happyimg2/img3/event/campaign/swiper-4.5.1.min.js','https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js','https://ssl.pstatic.net/happyimg2/img3/event/campaign/202107/2021pampersclub/pc_v1/js/jquery.counterup.min.js','https://code.jquery.com/ui/1.12.1/jquery-ui.min.js']
+    
+        var ScriptLazyLoader = function () { }
+        ScriptLazyLoader.prototype = {
+            require: function (scriptList, callback) {
+                if(scriptList.length === 0){
+                    callback();
+                    return;
+                }
+    
+                this.loadOrder      = 0;
+                this.totalRequired  = scriptList.length;
+                this.callback       = callback;
+                this.scriptList     = scriptList;
+    
+                this.writeScript(this.scriptList[this.loadOrder]);
+            },
+            loadNextScript: function () {
+                this.loadOrder++;
+                if(this.totalRequired <= this.loadOrder){
+                    this.callback();
+                }else{
+                    this.writeScript(this.scriptList[this.loadOrder]);
+                }
+            },
+            writeScript: function (src) {
+                var self = this;
+                var script = document.createElement('script');
+                script.type = "text/javascript";
+                script.src = src;
+                script.addEventListener('load', function () { self.loadNextScript(); }, false);
+                script.addEventListener('error', function () { self.loadNextScript(); }, false);
+                document.head.appendChild(script);
+            }
+        }
+    
+        var loader = new ScriptLazyLoader();
+        loader.require(scriptSourceList,
+            function() {
+                $J.ajax({
+                    url: '/campaign-service/campaign/content/' + campaignPath,
+                    success: function(response) {
+                        if (response.result !== null) {
+                            disposeContents(response.result);
+                        } else {
+                            alert('존재하지 않는 캠페인입니다.');
+                            history.back();
+                        }
+                    },
+                });
+            }
+        );
+    
+        function disposeContents(contents) {
+            $J('#content').prepend(contents);
+        }
+    </script>
+    <!-- // 본문 -->
+    
+        <!-- 파트너 영역 -->
+        <div class="campaign_partner">
+            <div class="partner_inner">
+                <div class="partner_thumb">
+                    <!-- [D] alt값 : 파트너 명 -->
+                    <img src="https://happybean-phinf.pstatic.net/20210914_36/16316027314319eCFo_JPEG/%EB%B3%B8%EA%B7%B8%EB%A3%B9%EB%EA%B3_124x124.jpg" width="80" height="80" alt="본그룹">
+                </div>
+                <div class="partner_info">
+                    <strong class="partner_title">
+                        본그룹
+                    </strong>
+                        <div class="partner_buttons">
+                                <a href="/partners/boncsr/home" class="link_homepage">홈</a>
+                            <!--button type="button" class="button_subscribe">구독</button-->
+                        </div>
+                    <div class="partner_subtitle">
+                        본으로 행복한 세상을 만들어가는 기업, 본그룹입니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //파트너 영역 -->
+    <div class="campaign_comment"><div class="comment_title">댓글</div><div id="cbox_module" class="u_cbox"><div class="u_cbox_wrap u_cbox_ko"><div class="u_cbox_head"><h5 class="u_cbox_title">댓글</h5><span class="u_cbox_count">9,533</span><button type="button" class="u_cbox_btn_refresh" data-action="count#refresh" data-log="RPO.refresh"><span class="u_cbox_ico_refresh"></span><span class="u_cbox_txt_refresh">새로고침</span></button><div class="u_cbox_head_tools"><div class="u_cbox_help_info"><strong class="u_cbox_info_label">BEST댓글 운영 기준 안내</strong><a href="#" role="button" class="u_cbox_btn_help" data-action="count#tools#toggle" data-log="RPO.helpopen#RPO.helpclose#RPO.infopen#RPO.infclose"><span class="u_cbox_ico_help"></span><span class="u_cbox_txt_help">안내 레이어 보기</span></a></div><div class="u_cbox_layer u_cbox_layer_help" style="display: none;"><strong class="u_cbox_info_title"><span class="u_cbox_ico_help"></span>BEST 댓글</strong><p class="u_cbox_info_txt">공감 투표 비율이 높은 댓글입니다.<br>비정상적인 방법으로 공감수가 증가하거나 타인에게 불쾌감을 주는 경우, 예고없이 제외될 수 있습니다.</p><a href="#" class="u_cbox_btn_info_close" data-action="count#tools#toggle" data-log="RPO.helpclose#RPO.infclose">BEST댓글 운영 기준 안내 레이어 닫기</a></div></div></div><div class="u_cbox_write_wrap"><div class="u_cbox_write_box u_cbox_type_logged_out"><form><fieldset><legend class="u_vc">댓글 쓰기</legend><div class="u_cbox_write"><div class="u_cbox_write_inner"><div class="u_cbox_write_area"><strong class="u_vc">댓글 입력</strong><div class="u_cbox_inbox"><textarea title="댓글" id="cbox_module__write_textarea" class="u_cbox_text" rows="3" cols="30" data-log="RPC.input"></textarea><label for="cbox_module__write_textarea" class="u_cbox_guide" data-action="write#placeholder" data-param="@event" style="display: inline;">댓글을 작성하려면 <a href="#" class="u_cbox_link">로그인</a> 해주세요</label></div></div><div class="u_cbox_upload_image" style="display:none"><span class="u_cbox_upload_image_wrap fileButton browsebutton _cboxImageSelect"><span class="u-cbox-browse-box"><input class="u-cbox-browse-file-input" type="file" name="browse" accept="image/*" title="이미지 추가"></span><a href="#" class="u_cbox_upload_thumb_link u-cbox-browse-button" data-log="RPP.add"><span class="u_cbox_upload_thumb_add">이미지 추가</span><span class="u_cbox_upload_thumb_mask"></span></a></span></div><div class="u_cbox_upload_sticker" style="display:none"></div><div class="u_cbox_write_count"><span class="u_vc">현재 입력한 글자수</span><strong class="u_cbox_count_num">0</strong>/<span class="u_vc">전체 입력 가능한 글자수</span><span class="u_cbox_write_total">1000</span></div><div class="u_cbox_upload"><div class="u_cbox_addition"></div><button type="button" class="u_cbox_btn_upload" data-action="write#request" data-log="RPC.write#RPC.reply"><span class="u_cbox_ico_upload"></span><span class="u_cbox_txt_upload">등록</span></button></div></div></div></fieldset></form></div></div><div class="u_cbox_notice u_cbox_notice_none" style="display: none;"></div><div id="cbox_module_wai_u_cbox_content_wrap_tabpanel" tabindex="0" class="u_cbox_content_wrap" style="outline: 0"><ul class="u_cbox_list"><li class="u_cbox_comment cbox_module__comment_180674 _user_id_no_b5nHd" data-info="commentNo:'180674',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'180674'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">애리나</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(kang****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">좋은나눔이멀리전파되었으면좋겠네요</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-28T05:37:11+0900">5일 전</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'180674',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="180674" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'180674',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_180600 _user_id_no_19xSN" data-info="commentNo:'180600',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'180600'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">윤</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(yysy****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">좋은 나눔  되기를 응원합니다</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-27T21:55:18+0900">5일 전</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'180600',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="180600" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'180600',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_180242 _user_id_no_3h0bO" data-info="commentNo:'180242',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'180242'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">낭만이</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(tjfg****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">좋은 캠페인입니다 응원합니다.!!</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-27T12:50:05+0900">5일 전</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'180242',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="180242" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'180242',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_179972 _user_id_no_b5nHd" data-info="commentNo:'179972',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'179972'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">애리나</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(kang****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">모두가행복하길응원합니다</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-27T06:11:40+0900">6일 전</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'179972',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="179972" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'179972',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_179759 _user_id_no_3XS2E" data-info="commentNo:'179759',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'179759'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">앙큼마녀</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(ysa5****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">언제나 응원 합니다</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-26T20:56:34+0900">6일 전</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'179759',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="179759" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'179759',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_178447 _user_id_no_2zS8w" data-info="commentNo:'178447',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'178447'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">시네마천국</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(sunn****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">응원합니다~ 힘내세요!!</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-25T16:17:34+0900">2021-10-25 16:17</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'178447',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="178447" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'178447',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_178005 _user_id_no_b5nHd" data-info="commentNo:'178005',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'178005'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">애리나</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(kang****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">큰나눔이힘이되길응원합니다</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-25T06:28:46+0900">2021-10-25 06:28</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'178005',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="178005" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'178005',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_177435 _user_id_no_4TbS" data-info="commentNo:'177435',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'177435'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">옥수수수</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(drow****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">큰나눔이 되길 응원합니다!</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-24T08:27:59+0900">2021-10-24 08:27</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'177435',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="177435" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'177435',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_177361 _user_id_no_2OTic" data-info="commentNo:'177361',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'177361'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">ooo</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(madi****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">응원합니다~~!</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-24T02:41:52+0900">2021-10-24 02:41</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'177361',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="177361" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'177361',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li><li class="u_cbox_comment cbox_module__comment_177193 _user_id_no_cebuY" data-info="commentNo:'177193',deleted:false,best:false,visible:true,secret:false,manager:false,mine:false,report:undefined,blindReport:false,objectId:'campaign;1000015',replyLevel:1,parentCommentNo:'177193'"><div class="u_cbox_comment_box"><div class="u_cbox_area"><div class="u_cbox_info"><span class="u_cbox_info_main"><span class="u_cbox_name"><span class="u_cbox_name_area"><span class="u_cbox_nick_area"><span class="u_cbox_nick">지피지기 백전불태</span></span><span class="u_cbox_id_area"><span class="u_cbox_id">(rgb2****)</span></span></span></span></span><span class="u_cbox_info_sub"></span></div><div class="u_cbox_text_wrap"><span class="u_cbox_contents" data-lang="ko">응원합니다11</span></div><div class="u_cbox_info_base"><span class="u_cbox_date" data-value="2021-10-23T21:48:32+0900">2021-10-23 21:48</span><span class="u_cbox_work_main"><a href="#" class="u_cbox_btn_report" data-action="report#request" data-param="commentNo:'177193',objectId:'campaign;1000015'" data-log="RPC.report" target="_blank"><span class="u_cbox_ico_bar"></span><span class="u_cbox_ico_report"></span><span class="u_cbox_in_report">신고</span></a></span></div><div class="u_cbox_tool"><a href="#" class="u_cbox_btn_reply" data-action="reply#toggle" data-param="177193" data-log="RPC.replyopen#RPC.replyclose"><strong class="u_cbox_reply_txt">답글</strong><span class="u_cbox_reply_cnt u_vc">0</span></a><div class="u_cbox_recomm_set"><strong class="u_vc">공감</strong><a href="#" data-action="vote" data-param="mine:false,commentNo:'177193',voteStatus:'SYMPATHY',objectId:'campaign;1000015',ticket:'happybean'" data-log="RPC.sym#RPC.unsym" class="u_cbox_btn_recomm"><span class="u_cbox_ico_recomm">공감</span><em class="u_cbox_cnt_recomm">0</em></a></div></div><span class="u_cbox_comment_frame"><span class="u_cbox_ico_tip"></span><span class="u_cbox_comment_frame_top"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span><span class="u_cbox_comment_frame_bottom"><span class="u_cbox_comment_bg_r"></span><span class="u_cbox_comment_bg_l"></span></span></span></div></div><div class="u_cbox_reply_area" style="display:none;"></div></li></ul></div><div class="u_cbox_paginate" style=""><div class="u_cbox_page_wrap"><span class="u_cbox_pre u_cbox_pre_end" title="첫 페이지 목록으로 이동하기"><span class="u_cbox_ico_page"></span><span class="u_cbox_cnt_page">맨앞</span><span class="u_vc">페이지 목록으로 이동하기</span></span><span class="u_cbox_pre" title="이전 페이지 목록으로 이동하기"><span class="u_cbox_ico_page"></span><span class="u_cbox_cnt_page">이전</span><span class="u_vc">페이지 목록으로 이동하기</span></span><strong class="u_cbox_page" data-param="1"><span class="u_cbox_num_page">1</span><span class="u_vc">현재 선택된 페이지</span></strong><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="2"><span class="u_cbox_num_page">2</span></a><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="3"><span class="u_cbox_num_page">3</span></a><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="4"><span class="u_cbox_num_page">4</span></a><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="5"><span class="u_cbox_num_page">5</span></a><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="6"><span class="u_cbox_num_page">6</span></a><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="7"><span class="u_cbox_num_page">7</span></a><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="8"><span class="u_cbox_num_page">8</span></a><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="9"><span class="u_cbox_num_page">9</span></a><a href="#" class="u_cbox_page" data-action="page#move" data-log="RPC.pgnum" data-param="10"><span class="u_cbox_num_page">10</span></a><a href="#" class="u_cbox_next" title="다음 페이지 목록으로 이동하기" data-action="page#move" data-log="RPC.pgnext" data-param="11"><span class="u_cbox_cnt_page">다음</span><span class="u_cbox_ico_page"></span><span class="u_vc">페이지 목록으로 이동하기</span></a><a href="#" class="u_cbox_next u_cbox_next_end" title="마지막 페이지 목록으로 이동하기" data-action="page#move" data-log="RPC.pglast" data-param="954"><span class="u_cbox_cnt_page">맨뒤</span><span class="u_cbox_ico_page"></span><span class="u_vc">페이지 목록으로 이동하기</span></a></div></div></div></div>
+    <script type="text/javascript">
+    var aFormation = ['count', 'write', 'list', 'page'];
+    (function(htOption) {
+        window.__htCboxOption = htOption;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.charset = 'utf-8';
+        s.src = htOption.sDomain + '/js/cbox.core.js?v=' + Math.floor(new Date().getTime() / 1200000);
+        (document.head || document.getElementsByTagName('head')[0]).appendChild(s);
+    })({
+        sDomain : 'https://ssl.pstatic.net/static.cbox',
+        sApiDomain : 'https://apis.naver.com/commentBox/cbox7',
+        bLogin : false,
+        sTicket : 'happybean',
+        sObjectId : 'campaign;1000015',
+        sHelp : 'up',
+        sLanguage : 'ko',
+        sCountry : 'KR',
+        sPageType : 'default',
+        nPageSize : 10,
+        nIndexSize : 10,
+        nReplyPageSize : 10,
+        nReplyIndexSize : 5,
+        sCountType :'total',
+        sAuthType : 'naver',
+        bIncludeAllComments : '',
+        nListSizeToShowMoveToFirst : 10,
+        nUserCommentPageSize : 10,
+        nUserCommentReplyPageSize : 5,
+        sLocale : '',
+        aFormation : aFormation,
+        sCssId : 'happybean'
+    });
+    </script></div></div>

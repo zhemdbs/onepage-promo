@@ -1,0 +1,25 @@
+
+/* popup layer */
+.popup_layer {box-sizing: border-box;}
+.popup_layer .popup_box{position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;z-index: 100;}
+.popup_layer .popup_box .popup_contents{position: relative;display: inline-block;top: 50%;left: 50%;width: 610px;text-align: center;transform: translate(-50%, -50%);background: #fff;border: 2px solid #000;z-index: 10;}
+.popup_layer .popup_box .popup_contents .btn_close{display: inline-block;width: 38px;height: 38px;position: absolute;right: 0px;top: -50px;background:url("https://ssl.pstatic.net/happyimg2/img3/hivelab/cjzero/pc/icon_close.png") no-repeat;}
+.popup_layer .dimmed {position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;background-color: #000;opacity: 0.7;}
+.popup_layer .popup_box .inner_wrap {position:relative;padding: 118px 0 46px;}
+.popup_layer .popup_box .popup_contents .popup_alert {font-size: 30px;font-weight: 700;color: #000;letter-spacing: -0.038em;line-height: 42px;}
+.popup_layer .popup_box .popup_contents .popup_alert::before {position: absolute;top: -120px;left: 50%;display: block;width: 315px;height: 200px;background: url("https://ssl.pstatic.net/happyimg2/upload/2021/09/24/118/people_img.png") no-repeat center center;background-size: 100% 100%;transform: translateX(-50%);content: '';}
+.popup_layer .popup_box .popup_contents .popup_alert p span {font-size: 34px;letter-spacing: 0.3px;}
+.popup_layer .popup_box .popup_contents .popup_alert  strong {display: inline-block;font-size: 38px;color: #4aca0a;}
+.popup_layer .popup_box .popup_contents .popup_personal {margin-top: 29px;font-size: 25px;font-weight:700;letter-spacing: -.5px;}
+.popup_layer .popup_box .popup_contents .popup_personal strong {font-size: 29px;font-weight:800;}
+.popup_layer .popup_box .popup_contents .popup_personal .user_count {display: inline-block;}
+.popup_layer .popup_box .popup_contents .btn_myhappybean {display: block;margin-top: 24px;}
+.popup_layer .popup_box .popup_contents .btn_myhappybean a {font-size: 24px;font-weight: 700;color: #4aca0a;}
+.popup_layer .popup_box .popup_contents .btn_myhappybean a em {position: relative;top: -2px;font-size: 16px;}
+.popup_layer .popup_box .popup_contents .btn_confirm {display:inline-block;width: 263px;height: 52px;margin-top: 40px;background-color: #00cc00;font-size: 29px;font-weight: 700;color: #fff;letter-spacing: -0.05em;line-height: 52px;}
+.popup_layer .popup_beans .inner_wrap{padding-top:90px}
+.popup_layer .popup_beans .popup_contents .btn_confirm{margin-top: 10px;}
+.popup_layer .popup_close .popup_contents .popup_alert::before {display:none;}
+.popup_layer .popup_close .inner_wrap {padding-top:61px}
+.popup_layer .popup_close .popup_contents .btn_confirm{margin-top: 30px;}
+/* // popup layer */

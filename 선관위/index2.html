@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중앙선거관리위원회</title>
+    <!-- 확인용 배포시 제거 -->
+    <link rel="stylesheet" href="pc/css/common.css">
+    <!-- // 확인용 배포시 제거 -->
+    <link rel="stylesheet" href="pc/css/main2.css">
+    <!-- <link rel="stylesheet" href="mo/css/main.css"> -->
+    <script src="https://ssl.pstatic.net/happyimg2/img3/event/campaign/swiper-4.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- 캠페인 본문 -->
+        <div class="good_wrap">
+            <div class="nec_contents">
+                <!-- [D] contribution 영역에 도달할 경우 wing 제거해주세요.-->
+                <div id="wing" aria-hidden="false">
+                    <div class="inner">
+                        <div class="inner_wrap">
+                            <div class="blind">참여수</div>
+                            <div class="count"><strong class="num">123,456</strong>건</div>
+                            <div class="shortcut-menu">
+                                <!-- [D] 각 섹션 위치에 도달했을 때, 활성화시 '.on' 클래스 추가해 주세요-->
+                                <button type="button"><a href="#section_01"><span class="blind">올바른 기표</span></a></button>
+                                <button type="button"><a href="#section_02"><span class="blind">투표 인증샷</span></a></button>
+                                <button type="button"><a href="#section_03"><span class="blind">선거용어</span></a></button>
+                                <button type="button"><a href="#section_04"><span class="blind">투표속담</span></a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_01">
+                    <div class="inner">
+                        <h1 class="logo"><a href="https://www.nec.go.kr/site/nec/main.do" target="_blank" title="새창으로 열기"><span class="blind">중앙선거관리위원회</span></a></h1>
+                        <p class="blind">내가 만드는 내일의 대한민국 2022년 3월 9일(수) 제 20대 대통령선거 나의 선택이 내일의 대한민국을 만듭니다. 여러분의 <strong>소중한 한 표</strong>를 행사해 주세요!</p>
+                        <div class="video_area">
+                            <div class="tab_menu">
+                                <ul class="tab_btn">
+                                    <!-- [D] 활성화 시 '.on' class 추가해주세요. -->
+                                    <li data-tab="item1" class="on"><a href="#item1"><span class="blind">강재준&이은형 투표를 안 할 순 없어!</span></a></li>
+                                    <li data-tab="item2"><a href="#item2"><span class="blind">오은영의 금쪽 선거상담소</span></a></li>
+                                </ul>
+                                <div class="video_content">
+                                    <!-- [D] 활성화 시 '.on' class 추가해주세요. -->
+                                    <div id="item1" class="video_item on">
+                                        <div class="video_box">
+                                            <iframe src="https://www.youtube.com/embed/yHljarQpIWQ"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <!-- [D] 활성화 시 '.on' class 추가해주세요. -->
+                                    <div id="item2" class="video_item">
+                                        <div class="video_box">
+                                            <iframe src="https://www.youtube.com/embed/cAAAe7ajOao"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end : section_01 -->
+                <div class="section02 slide" id="section_02">
+                    <div class="inner">
+                        <div class="heading_area">
+                            <p class="blind">올바른 기표 방법을 알아봐요</p>
+                            <p class="blind">올바른 기표란? 한 명의 후보자 기표란 안에 '기표모양(이미지)' 모양이 찍히도록 기표!</p>
+                            <p class="blind">유효투표? 무효투표? 궁금하다면, 함게 궁금증을 해결해요!</p>
+                            <p class="blind">모두 확인 시, ID당 콩 1개 지급</p>
+                        </div>
+                        <div class="tab">
+                            <div class="tab_menu">
+                                <ul class="tab_btn">
+                                    <!-- [D] 활성화 시 '.on' class 추가해주세요. -->
+                                    <li data-tab="vote1" class="on"><a href="#vote1"><span class="blind">유효투표 예시</span></a></li>
+                                    <li data-tab="vote2"><a href="#vote2"><span class="blind">무효투표 예시</span></a></li>
+                                </ul>
+                                <!-- [D] 두번째 탭 클릭 유도효과 입니다. '.on' class 추가해주세요. -->
+                                <div id="inductionEffect" class="more_ico "></div>
+                                <div class="vote_content">
+                                    <!-- [D] 활성화 시 '.on' class 추가해주세요. -->
+                                    <div id="vote1" class="vote_item on">
+                                        <div class="swiper vote_box01">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide slide01">
+                                                    <p class="blind">유효투표가 될 수 있는 사례를 알아보아요!</p>
+                                                </div>
+                                                <div class="swiper-slide slide02">
+                                                    <ol class="vote_valid blind">
+                                                        <li>기표가 <strong>일부분 표시</strong> 되었으나 정규의 기표용구임이 명확한 것</li>
+                                                        <li>기표란에 기표되고, <strong>후보자란 외의 여백</strong>에 기표를 추가한 것 (접선되지 않은 것)</li>
+                                                        <li>한 후보자란에만 <strong>두 번 이상 기표</strong>된 것</li>
+                                                        <li><strong>후보자(기호·정당명·설명·기표)란에 접선</strong>하여 기표된 것</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <button id="validVote" class="swiper-button vote_btn01"><span class="blind">다음 버튼</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- [D] 활성화 시 '.on' class 추가해주세요. -->
+                                    <div id="vote2" class="vote_item ">
+                                        <div class="swiper vote_box02">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide slide01">
+                                                    <p class="blind">무효투표가 될 수 있는 사례를 알아보아요!</p>
+                                                </div>
+                                                <div class="swiper-slide slide02">
+                                                    <ol class="vote_invalid blind">
+                                                        <li><strong>2란</strong>에 걸쳐서 기표한 것</li>
+                                                        <li>서로 다른 후보자(기호·정당명·설명·기표)란에 <strong>2개 이상의 기표를 한 것</strong></li>
+                                                        <li>기표를 하고 <strong>문자</strong> (좋다, 나쁘다, 공명선거 등) 또는 <strong>물형</strong>(○, □, Ｖ, Ｘ, △ 등)을 기입한 것</li>
+                                                        <li>기표를 하고 선거인의 <strong>성명</strong>을 기입하거나, 인장의 날인 또는 무인을 찍은 것</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <button id="invalidVote" class="swiper-button vote_btn02"><span class="blind">다음 버튼</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [D] 활성화 시 '.is-active' 클래스 추가해주세요. -->
+                    <div class="collecting_beans">
+                        <a href="#" class="beans_btn"><span class="blind">모두 확인했어요! 콩 받기</span></a>
+                    </div>
+                </div><!-- end : section_02 -->
+                <div class="section03 drag" id="section_03">
+                    <div class="inner">
+                        <div class="heading_area">
+                            <p class="blind">투표 인증샷 알고 찍으면 좋아요</p>
+                            <p class="blind">아리송한 투표 인증샷 기준들, 기표도장을 완성해 자세히 확인해보세요!</p>
+                            <span class="blind">모두 확인 시 ID당 콩 1개 지급</span>
+                        </div>
+                        <ul class="drag_box">
+                            <!-- [D] 드래그 전 default: active -->
+                            <!-- [D] 드래그 완료시 'on' 클래스 추가 -->
+                            <li id="drag1" class="active">
+                                <div>
+                                    <span class="blind">기표소 내에서 촬영 할 수 있을까요?</span>
+                                </div>
+                            </li>
+                            <li id="drag2">
+                                <div>
+                                    <span class="blind">투표소 밖에서 기념사진을 찍어도 될까요?</span>
+                                </div>
+                            </li>
+                            <li id="drag3">
+                                <div>
+                                    <span class="blind">인증샷 찍을 때 V(브이)해도 되나요?</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="drop_box">
+                            <!-- [D] 드롭 전 default: active -->
+                            <!-- [D] 드래그 하여 맞췄을 경우 on 클래스 추가 -->
+                            <div id="drop1" class=" active">
+                                <span class="blind">기표소 안에서 투표지 촬영 할 수 있을까요? (오답)</span>
+                            </div>
+                            <div id="drop2">
+                                <span class="blind">투표소 밖에서 기념사진을 찍어도 될까요? (정답)</span>
+                            </div>
+                            <div id="drop3">
+                                <span class="blind">인증샷 찍을 때 V(브이) 해도 되나요? (정답)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [D] 활성화 시 '.is-active' 클래스 추가해주세요. -->
+                    <div id="secondCongButton" class="collecting_beans">
+                        <a href="#" class="beans_btn"><span class="blind">모두 확인했어요! 콩 받기</span></a>
+                    </div>
+                </div><!-- end : section_03 -->
+                <div class="section04 term" id="section_04">
+                    <div class="inner">
+                        <div class="heading_area">
+                            <p class="blind">선거용어, 어렵지 않아요</p>
+                            <p class="blind">알면 알수록 유익한 선거용어, 궁금한 선거용어를 클릭해 중앙선거관리위원회 카드뉴스를 확인하고 선거마스터가 되어보세요!</p>
+                            <span class="blind">1개 이상 확인 시, ID 당 1,000원 매칭기부</span>
+                        </div>
+                        <div class="terms_area">
+                            <div class="terms_box01">
+                                <ul class="terms_text">
+                                    <li class="item terms1">
+                                        <a href="https://blog.naver.com/nec1963/222507803937" target="_blank" title="새창으로 열기"><p class="blind">기부행위 상시제한</p></a>
+                                    </li>
+                                    <li class="item terms2">
+                                        <a href="https://blog.naver.com/nec1963/222515620823" target="_blank" title="새창으로 열기"><p class="blind">여론조사</p></a>
+                                    </li>
+                                    <li class="item terms3">
+                                        <a href="https://blog.naver.com/nec1963/222439807976" target="_blank" title="새창으로 열기"><p class="blind">재외선거</p></a>
+                                    </li>
+                                    <li class="item terms4">
+                                        <a href="https://blog.naver.com/nec1963/222497042359" target="_blank" title="새창으로 열기"><p class="blind">예비후보자</p></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="terms_box02">
+                                <div class="webtoon">
+                                    <p class="blind">‘내일을 위한 소중한 한 표’ 웹툰으로도 알기 쉽게 만나요</p>
+                                    <p class="blind">중앙선거관리위원회x라마작가</p>
+                                    <span class="blind">바로가기 클릭 시, ID 당 콩 1개 지급</span>
+                                </div>
+                                <div class="btn">
+                                    <div class="link_btn"><a href="https://blog.naver.com/nec1963/222569870200" class="goto_btn" target="_blank" title="새창으로 열기"><span class="blind">웹툰 바로가기</span></a></div>
+                                    <!-- [D] words_list의 스탬프가 다 채워진 후, 활성화 시 '.on' 클래스 추가해주세요. -->
+                                    <div class="collecting_beans"><a href="#" class="beans_btn"><span class="blind">확인했어요! 콩 받기</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div><!-- end : section_04 -->
+                <div class="section05" id="section_05">
+                    <div class="inner">
+                        <p class="blind">속담·성어로도 투표를 재미있게 만나요!</p>
+                        <p class="blind">우리는 '소중한 유권자'입니다.</p>
+                        <div class="more_info">
+                            <ul class="blind">
+                                <li>금지옥표</li>
+                                <li>솔선수표</li>
+                                <li>천리길도 한표부터</li>
+                                <li>금강산도 투표 후</li>
+                            </ul>
+                        </div>
+                        <p class="blind">선거에 대해 마스터 한 당신! 대한민국의 미래를 위해 '소중한 한 표' 행사 잊지 마세요~!</p>
+                        <p class="blind">선거일 투표 : 2022년 3월 9일(수) 오전 6시 ~ 오후 6시</p>
+                        <p class="blind">사전 투표일 : 2022년 3월 4일(금) ~ 5일(토) 매일 오전 6시 ~ 오후 6시</p>
+                    </div>
+                </div><!-- end : section_05 -->
+                <div class="section06 sns">
+                    <div class="inner">
+                        <div class="more_info">
+                            <p class="blind">제 20대 대통령선거에 대한 자세한 정보는 중앙선거관리위원회 SNS 채널에서 확인해 주세요!</p>
+                            <ul class="sns_list">
+                                <li><a href="https://blog.naver.com/nec1963" target="_blank" title="새창으로 열기"><span class="blind">네이버 블로그</span></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCjv_oOonIe615svanuXx-Pw" target="_blank" title="새창으로 열기"><span class="blind">Youtube</span></a></li>
+                                <li><a href="https://www.instagram.com/nec1963/" target="_blank" title="새창으로 열기"><span class="blind">인스타그램</span></a></li>
+                                <li><a href="https://www.facebook.com/2014nec" target="_blank" title="새창으로 열기"><span class="blind">페이스북</span></a></li>
+                                <li><a href="https://story.kakao.com/ch/2016nec" target="_blank" title="새창으로 열기"><span class="blind">카카오스토리</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- end : section06 -->
+                <div class="section07">
+                    <div class="inner">
+                        <p class="blind">여러분의 참여로 조성된 매칭기부금은 <strong>취약계층을 위해 기부될 예정</strong>입니다.</p>
+                        <p class="blind">최대 6,000,000원</p>
+                        <ul class="donate_list">
+                            <li class="donate_item">
+                                <div class="donate_box">
+                                    <dl class="blind">
+                                        <dt class="title"><strong>당진북부사회복지관</strong></dt>
+                                        <dd class="info_text">농촌지역 아이들에게 놀이터를 선물해주세요!</dd>
+                                    </dl>
+                                    <p class="text blind">농촌지역 취약계층 아동 방과 후 문화체험 지원</p>
+                                    <div class="link_btn">
+                                        <a href="https://happybean.naver.com/donations/H000000180829" class="btn" target="_blank" title="새창으로 열기"><span class="blind">자세히 보기</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="donate_item">
+                                <div class="donate_box">
+                                    <dl class="blind">
+                                        <dt class="title"><strong>한국헬프에이지</strong></dt>
+                                        <dd class="info_text">어르신의 텅 빈 냉장고, 사랑의 김장김치로 채워주세요!</dd>
+                                    </dl>
+                                    <p class="text blind">저소득 어르신 겨울나기 김장김치 지원</p>
+                                    <div class="link_btn">
+                                        <a href="https://happybean.naver.com/donations/H000000181245" class="btn"  target="_blank" title="새창으로 열기"><span class="blind">자세히 보기</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- end : section07 -->
+                <div class="section08">
+                    <div class="inner">
+                        <ul class="link_list">
+                            <li class="link_item naver_band"><a href="#" target="_blank" title="새창으로 열기"><span class="blind">네이버밴드</span></a></li>
+                            <li class="link_item kakaostory"><a href="#" target="_blank" title="새창으로 열기"><span class="blind">카카오스토리</span></a></li>
+                            <li class="link_item facebook"><a href="#" target="_blank" title="새창으로 열기"><span class="blind">페이스북</span></a></li>
+                            <li class="link_item twitter"><a href="#" target="_blank" title="새창으로 열기"><span class="blind">트위터</span></a></li>
+                        </ul>
+                        <p class="blind">중앙선거관리위원회 캠페인을 공유해주세요</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- [D] 팝업창 -->
+            <div class="popup_layer">
+                <!-- 로그인 안내 팝업 -->
+                <div class="popup_box popup_login" style="display: none">
+                    <div class="popup_contents">
+                        <div class="inner_wrap">
+                            <div class="popup_alert">
+                                <p class="blind">비로그인 상태입니다. 비로그인 상태에서는 참여 리워드가 지급되지 않습니다.</p>
+                            </div>
+                            <a href="#" class="btn_login"><span class="blind">로그인 하기</span></a>
+                        </div>
+                        <button type="button" class="btn_close"><span class="blind">창닫기</span></button>
+                    </div>
+                    <div class="dimmed"></div>
+                </div>
+                <!-- // 로그인 안내 팝업 -->
+
+                <!-- 콩 지급 팝업  -->
+                <div class="popup_box popup_beans" style="display: none;">
+                    <div class="popup_contents">
+                        <div class="inner_wrap">
+                            <div class="popup_alert">
+                                <p class="blind">캠페인에 참여해주셔서 감사합니다.</p>
+                                <p class="blind">콩 1개를 받으셨습니다.</p>
+                            </div>
+                            <div class="popup_personal">
+                                <p class="user"><span class="user_name">땡땡</span><span class="blind">님의 보유 콩 개수</span></p>
+                                <p class="count"><span class="user_count">15</span>개</p>
+                            </div>
+                            <div class="btn_myhappybean">
+                                <a href="http://happybean.naver.com/my/MyCongUsingDetailMain" target="_blank"><span
+                                        class="blind">My해피빈 바로가기</span></a>
+                            </div>
+                            <button type="button" class="btn_confirm"><span class="blind">확인</span></button>
+                        </div>
+                        <button type="button" class="btn_close"><span class="blind">창닫기</span></button>
+                    </div>
+                    <div class="dimmed"></div>
+                </div>
+                <!-- // 콩 지급 팝업-->
+
+                <!-- 캠페인 종료 시 팝업 -->
+                <div class="popup_box popup_close" style="display: none;">
+                    <div class="popup_contents">
+                        <div class="inner_wrap">
+                            <div class="popup_alert">
+                                <p class="blind">캠페인이 종료되어 콩이 지급되지 않습니다. 참여해 주셔서 감사합니다!</p>
+                            </div>
+                            <button type="button" class="btn_confirm"><span class="blind">확인</span></button>
+                        </div>
+                        <button type="button" class="btn_close"><span class="blind">창닫기</span></button>
+                    </div>
+                    <div class="dimmed"></div>
+                </div>
+                <!-- // 캠페인 종료 시 팝업 -->
+
+                <!-- 이미 참여 안내 팝업 -->
+                <div class="popup_box popup_already" style="display: none;">
+                    <div class="popup_contents">
+                        <div class="inner_wrap">
+                            <div class="popup_alert">
+                                <p class="blind">캠페인에 이미 참여하여 콩이 지급되지 않습니다. 감사합니다!</p>
+                            </div>
+                            <button type="button" class="btn_confirm"><span class="blind">확인</span></button>
+                        </div>
+                        <button type="button" class="btn_close"><span class="blind">창닫기</span></button>
+                    </div>
+                    <div class="dimmed"></div>
+                </div>
+                <!-- // 이미 참여 안내 팝업 -->
+
+                <!-- 기표소 내 촬영 팝업 -->
+                <div id="popup_sec_03_01" class="popup_box" style="display: none;">
+                    <div class="popup_contents sec03_event">
+                        <div class="inner_wrap">
+                            <div class="popup_alert blind">
+                                <p>기표소 안에서 투표지를 촬영할 경우 <strong>2년 이하의 징역 또는 400만원 이하의 벌금</strong>에 처해질 수 있어요</p>
+                                <p>투표참여에 대한 확인이 필요한 경우 투표관리관에게 투표확인증을 발급받으시기 바랍니다.</p>
+                            </div>
+                            <button type="button" class="btn_confirm" onclick="layer_CLOSE('#popup_sec_03_01');"><span class="blind">확인했어요</span></button>
+                        </div>
+                        <button type="button" class="btn_close" onclick="layer_CLOSE('#popup_sec_03_01');"><span class="blind">창닫기</span></button>
+                    </div>
+                    <div class="dimmed" onclick="layer_CLOSE('#popup_sec_03_01');"></div>
+                </div>
+        
+                <!-- 투표소 밖 촬영 팝업 -->
+                <div id="popup_sec_03_02" class="popup_box" style="display: none;">
+                    <div class="popup_contents sec03_event">
+                        <div class="inner_wrap">
+                            <div class="popup_alert blind"><p>투표소 밖에서는 <strong>질서를 해치지 않는 범위</strong>에서 기념사진을 촬영해도 됩니다.</p></div>
+                            <button type="button" class="btn_confirm" onclick="layer_CLOSE('#popup_sec_03_02');"><span class="blind">확인했어요</span></button>
+                        </div>
+                        <button type="button" class="btn_close" onclick="layer_CLOSE('#popup_sec_03_02');"><span class="blind">창닫기</span></button>
+                    </div>
+                    <div class="dimmed" onclick="layer_CLOSE('#popup_sec_03_02');"></div>
+                </div>
+        
+                <!-- 브이 팝업 -->
+                <div id="popup_sec_03_03" class="popup_box" style="display: none;">
+                    <div class="popup_contents sec03_event">
+                        <div class="inner_wrap">
+                            <div class="popup_alert blind">
+                                <p>엄지를 들거나 손가락으로 브이자를 표시하는 등 <strong>정당, 후보자의 기호를 표시한 인증샷을 SNS에 게시, 전송할 수 있어요.</strong></p>
+                            </div>
+                            <button type="button" class="btn_confirm" onclick="layer_CLOSE('#popup_sec_03_03');"><span class="blind">확인했어요</span></button>
+                        </div>
+                        <button type="button" class="btn_close" onclick="layer_CLOSE('#popup_sec_03_03');"><span class="blind">창닫기</span></button>
+                    </div>
+                    <div class="dimmed" onclick="layer_CLOSE('#popup_sec_03_03');"></div>
+                </div>
+            </div>
+            <!-- // [D] 팝업창 -->
+        </div>
+    </div>
+    <!-- // 캠페인 본문 -->
+
+    <!-- swiper 확인용 입니다. 개발시 제거해주세요. -->
+    <script>
+        new Swiper(".vote_box01", {
+            navigation : { // 네비게이션 설정
+                nextEl : '.vote_btn01', // 다음 버튼 클래스명
+            },
+        });
+
+        new Swiper(".vote_box02", {
+            navigation : { // 네비게이션 설정
+                nextEl : '.vote_btn02', // 다음 버튼 클래스명
+            },
+            observer: true,
+            observeParents: true,
+        });
+
+        //탭메뉴
+        $('.tab_menu').each(function () {
+            var curTab = $(this);
+
+            // 첫 번째 디폴트 메뉴 보여줌.
+            $(this).children('.tab_btn').children('li').first().siblings().removeClass('on');
+            $(this).children('.vote_content').children('.vote_item').first().siblings().removeClass('on');
+
+            curTab.find('li').click(function () {
+                var tabId = $(this).attr('data-tab');
+                if (tabId == 'vote2') {
+                    $('#inductionEffect').removeClass('on');
+                }
+
+                curTab.find('.tab_btn li').removeClass('on');
+                $(this).addClass('on');
+
+                curTab.find('.vote_content .vote_item').removeClass('on');
+                curTab.find('#' + tabId).addClass('on');
+
+                return false;
+            })
+        })
+    </script>
+    <script>
+        var activateFirstCongButton = function() {
+            if ($('#validVote').hasClass('done') && $('#invalidVote').hasClass('done')) {
+                $('#firstCongButton').addClass('on');
+            }
+        }
+        $('#validVote').click(function (event) {
+            $(this).addClass('done');
+            $('#inductionEffect').addClass('on');
+            activateFirstCongButton();
+        });
+
+        $('#invalidVote').click(function (event) {
+            $(this).addClass('done');
+            activateFirstCongButton();
+        });
+    </script>
+    <script>
+        var layer_OPEN = function (obj_selector){
+            console.log(obj_selector)
+            var obj = $(obj_selector);
+            obj.css({'display':'block','opacity':0});
+            obj.stop().animate({'opacity':1},500);
+        };
+
+        //레이어 클로즈
+        var layer_CLOSE = function (obj_selector){
+            var obj = $(obj_selector);	
+            obj.stop().animate({'opacity':0},500,function (){
+                $(this).css({'display':'none'});	
+            });
+        };
+    </script>
+    <script>
+        $( ".drag_box > li" ).draggable({ containment: ".drag", revert: true, scroll: false, cancel: false});
+
+        //드롭 이벤트
+        $('#drop1').droppable({
+                accept: '#drag1',
+                drop: function(event, ui) {
+                    $('#drag1').removeClass('active');
+                    $('#drag1').addClass('on');
+                    $('#drop1').removeClass('active');
+                    $('#drop1').addClass('on');
+                    $('#drop2').addClass('active');
+                    $('#drag2').addClass('active');
+                    layer_OPEN('#popup_sec_03_01');
+                }
+            });
+            $('#drop2').droppable({
+                accept: '#drag2',
+                drop: function(event, ui) {
+                    if ($('#drag2').hasClass('active')) {
+                        $('#drag2').removeClass('active');
+                        $('#drag2').addClass('on');
+                        $('#drop2').removeClass('active');
+                        $('#drop2').addClass('on');
+                        $('#drop3').addClass('active');
+                        $('#drag3').addClass('active');
+                        layer_OPEN('#popup_sec_03_02');
+                    }
+                }
+            });
+            $('#drop3').droppable({
+                accept: '#drag3',
+                drop: function(event, ui) {
+                    if ($('#drag3').hasClass('active')) {
+                        $('#drag3').removeClass('active');
+                        $('#drag3').addClass('on');
+                        $('#drop3').removeClass('active');
+                        $('#drop3').addClass('on');
+                        $('#secondCongButton').addClass('is-active');
+                        layer_OPEN('#popup_sec_03_03');
+                    }
+                }
+            });
+    </script>
+    <script>
+        // section04의 'voting_words' 단어 클릭 시 마스터 이미지로 변환.
+        $('.terms_box01 li a').click(function () {
+            $(this).parent().addClass('done');
+        });
+    </script>
+</body>
+</html>
